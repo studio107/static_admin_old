@@ -15,7 +15,6 @@
     "codemirror-formatting": "git@github.com:studio107/codemirror-formatting.git",
     "mwysiwyg": "1.0",
     "fancybox": "~2.1.5",
-    "tinymce": "~4.1.5",
     "pickmeup": ">=2.5.1",
     "tinymce107": ">=1.0.0"
   }

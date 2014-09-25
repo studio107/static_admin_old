@@ -58,7 +58,6 @@ var paths = {
         'vendor/mwysiwyg/dist/js/1.0.0.all.js',
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
-        'vendor/tinymce/tinymce.js',
 
         'components/mtooltip/mtooltip.js',
 
