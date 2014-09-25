@@ -1,0 +1,27 @@
+#login {
+  #base {
+    min-width: inherit;
+    display: block;
+  }
+  #base-line {
+    display: block;
+  }
+  .header {
+    #logo {
+      text-align: center;
+      font-size: 48px;
+    }
+  }
+  .container {
+    @include box-shadow(0 0 29px rgba(1, 1, 1, .08));
+    @include border-radius(8px);
+    padding: 25px;
+    background-color: #fff;
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}

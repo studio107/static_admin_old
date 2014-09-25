@@ -1,0 +1,138 @@
+.toolbar {
+  display: inline-block;
+
+  select {
+    width: 200px;
+  }
+
+  .search-toolbar {
+    display: none;
+    position: relative;
+
+    .exit-search, .icon-search {
+      position: absolute;
+      height: 39px;
+      line-height: 39px;
+      width: 39px;
+      text-align: center;
+    }
+
+    .exit-search {
+      right: 0;
+      top: 0;
+    }
+
+    .icon-search {
+      left: 0;
+      top: 0;
+    }
+
+    i {
+      position: relative;
+      top: 2px;
+      color: $midGrey;
+    }
+
+    input {
+      padding-left: 39px;
+      @include border-radius(3px);
+      background-color: $grey;
+
+      &:focus{
+        border: 1px solid $blue;
+      }
+    }
+
+  }
+
+  .search {
+    margin-right: 10px;
+  }
+
+  .create {
+    margin-right: 20px;
+
+    i {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .submit-actions {
+    margin-left: 10px;
+  }
+
+  &.search {
+    width: 100%;
+
+    .search-toolbar {
+      @include crossbrowser(animation-name, show);
+      @include crossbrowser(animation-duration, 0.3s);
+      @include crossbrowser(animation-fill-mode, both);
+      display: block;
+    }
+
+    .search, .create, .actions, .submit-actions {
+      display: none;
+    }
+  }
+}
+
+.button.custom-button {
+  padding: 0 10px;
+
+  &.sub-button-left {
+    padding-left: 0;
+
+    .sub-button {
+      @include transition(background-color 300ms ease-out);
+      @include border-radius(3px 0 0 3px);
+      display: inline-block;
+      background: $blue;
+      padding: 0 10px;
+      margin-right: 3px;
+    }
+
+    &:hover, &:active {
+      .sub-button {
+        background: $midBlue;
+      }
+    }
+  }
+
+  &.submit-actions{
+    background-color: #7c7c7c
+  }
+}
+
+.toolbar {
+  $toolbarButtonHeight: 30px;
+
+  select {
+    @include border-radius(3px);
+    background-color: $lightGrey;
+    border: none;
+    padding: 5px 10px;
+  }
+
+  select, .button {
+    height: $toolbarButtonHeight;
+  }
+
+  .button {
+    line-height: $toolbarButtonHeight;
+    padding: 0 8px;
+  }
+}
+
+@include keyframes(show) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-20px));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}

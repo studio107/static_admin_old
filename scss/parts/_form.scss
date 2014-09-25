@@ -1,0 +1,224 @@
+@import "compass/typography/text/ellipsis";
+
+fieldset {
+  border-width: 1px 0 0 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+form.save-update{
+  .buttons-block{
+    padding: $column-gutter/2;
+    .button{
+      margin-bottom: 0;
+      @include border-radius(3px);
+    }
+  }
+}
+
+.current-file {
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+textarea {
+  max-width: 100%;
+}
+
+form {
+  &.save-update {
+    padding: 0;
+    margin-top: 15px;
+
+    .form-ul {
+      padding: $defaultPadding;
+      border-top: 1px solid #dddddd;
+    }
+
+    .form-block {
+      padding: 0 $defaultPadding;
+    }
+
+    fieldset {
+      padding: $defaultPadding;
+      padding-top: $defaultPadding + 25px;
+      position: relative;
+      margin: 0;
+
+      legend {
+        position: absolute;
+        top: 15px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .form-ul, .form-block {
+        padding: 0;
+        border-top: none;
+      }
+    }
+
+    select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"] {
+      width: 50%;
+    }
+
+    .inline-form {
+      .form-inline-section {
+        padding: 5px 0 10px;
+        border-bottom: 1px solid $clouds;
+
+        select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"] {
+          width: 100%;
+        }
+
+        a.current-file {
+          @include ellipsis();
+          display: block;
+        }
+
+        .form-block {
+          margin: 0;
+        }
+
+        table {
+          margin: 0;
+
+          tr {
+
+            &:hover {
+              background-color: transparent;
+            }
+
+            td {
+              vertical-align: top;
+              padding: 0 6px;
+
+              p {
+                font-size: 14px;
+                line-height: 1.2;
+              }
+
+              &:first-child {
+                padding-left: 0;
+              }
+
+              &:last-child {
+                padding-right: 0;
+              }
+
+            }
+          }
+        }
+      }
+
+      .inline-add {
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  .form-block{
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+    color: $mediumGrey;
+    margin-bottom: 4px;
+  }
+
+  ul.error{
+    list-style: none;
+    margin: 0;
+    color: $validationColor;
+    font-size: 13px;
+    font-style: italic;
+
+    li {
+      display: block;
+      margin-top: 6px;
+
+      &:before {
+        font-family: 'glyphico';
+        content: "\e683";
+        font-weight: normal;
+        font-style: normal;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  select {
+    &[multiple] {
+      min-height: 120px;
+      height: auto;
+    }
+  }
+
+  input, select {
+    margin: 0 !important;
+  }
+
+  .form-ul {
+    @include reset-list;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-inline-table {
+    tbody, tfoot, thead {
+      tr {
+        th, td {
+          vertical-align: top;
+
+          &.actions {
+            vertical-align: middle;
+          }
+
+          label {
+            color: $concrete;
+          }
+        }
+      }
+    }
+  }
+
+  .form-hint-text {
+    font-size: 13px;
+    color: $midGrey;
+  }
+}
+
+.errorMessage {
+  color: $pomegranate;
+}
+
+.form-label {
+  margin-bottom: 0;
+  label {
+    color: $concrete;
+  }
+}
+
+textarea {
+  min-height: 120px;
+}
+
+[disabled] {
+  cursor: not-allowed !important;
+}
+
+.form-inline-delete {
+  @include float-right;
+  color: #ccc;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: arial;
+  &:hover {
+    color: #a00;
+  }
+}

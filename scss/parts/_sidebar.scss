@@ -1,0 +1,86 @@
+#sidebar {
+  @include box-sizing(border-box);
+  padding: 0;
+  width: $sidebarWidth;
+  background-color: $grey;
+
+  #sidebar-menu {
+    @include reset-list;
+
+    & > li {
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+
+    li {
+      .divider {
+        display: block;
+        height: 1px;
+        margin: 0 $defaultPadding;
+        background-color: $borderColor;
+      }
+
+      span {
+        padding-left: $defaultPadding;
+        padding-right: $defaultPadding;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: $darkGrey;
+        background-color: $grey;
+
+        i {
+          margin-right: 4px;
+        }
+      }
+
+      ul {
+        @include reset-list;
+        margin-top: 12px;
+        display: inline-block;
+        width: 100%;
+
+        li {
+          position: relative;
+          font-size: 14px;
+          line-height: 20px;
+          margin: 0;
+          @include box-sizing(border-box);
+
+          &, & a {
+            color: #333539;
+          }
+
+          &.active, &:hover {
+            $borderLeftSize: 4px;
+            border-left: 4px solid $blue;
+
+            a {
+              padding-left: $defaultPadding - $borderLeftSize;
+              color: $blue;
+
+              i {
+                color: $blue;
+              }
+            }
+          }
+
+          a {
+            font-size: 13px;
+            display: block;
+            padding-left: $defaultPadding;
+            font-weight: normal;
+
+            i {
+              width: 25px;
+              display: inline-block;
+              color: darken($midGrey, 10%);
+              position: relative;
+              top: 2px;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

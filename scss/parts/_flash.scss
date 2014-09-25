@@ -1,0 +1,35 @@
+.flash-list {
+  @include reset-list;
+  padding-top: $defaultPadding - 20px;
+
+  li {
+    font-size: 18px;
+    font-weight: 200;
+    background-color: $grey;
+    border-style: solid;
+    border-color: darken($grey, 10%);
+    border-width: 1px 0;
+    padding: 10px $defaultPadding;
+    margin-bottom: 10px;
+
+    .close {
+      font-family: $helvetica;
+      cursor: pointer;
+      font-size: 26px;
+      line-height: 26px;
+      @include mopacity(0.5);
+    }
+
+    &.success, &.info {
+      color: #948461;
+      border-color: #EBE2B6;
+      background-color: #F9F6E3;
+    }
+
+    &.error, &.warning {
+      color: #c48383;
+      border-color: #f1d0d0;
+      background-color: #ffebeb;
+    }
+  }
+}

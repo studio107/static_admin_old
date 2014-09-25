@@ -1,0 +1,192 @@
+@import "normalize";
+@import "foundation/settings";
+@import "base";
+@import "foundation";
+@import "mindy";
+@import "parts/mixins";
+
+body {
+  background-color: $grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200 !important;
+  color: #777;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.button {
+  @include antialias;
+}
+
+fieldset {
+  legend {
+    @include antialias;
+  }
+}
+
+#header {
+  @include clearfix;
+  padding: 0 $defaultPadding;
+  height: $logoSize;
+  line-height: $logoSize;
+  margin: 30px 0 45px;
+
+  #logo {
+    width: $logoSize;
+    height: $logoSize;
+    font-size: $logoSize;
+    font-weight: 700;
+
+    color: $darkGrey;
+    margin: -6px 0 0;
+    @include antialias;
+  }
+
+  .manage {
+    padding-left: 13px;
+
+    a {
+      color: $darkGrey;
+      margin-left: 13px;
+      font-size: 14px;
+    }
+  }
+
+  .user-panel {
+    @include reset-list;
+    li {
+      @include float-left;
+      margin-left: 15px;
+    }
+  }
+}
+
+#wrapper {
+  @include box-sizing(border-box);
+  height: 100%;
+  width: 100%;
+
+  @import "parts/sidebar";
+  @import "parts/breadcrumbs";
+
+  #main {
+    @include clearfix;
+    padding: 0;
+
+    #content {
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: $borderColor;
+      background-color: #fff;
+      height: 100%;
+
+      .heading {
+        padding: 10px $defaultPadding 0 $defaultPadding;
+
+        h1 {
+          margin-bottom: 0;
+        }
+      }
+
+      .content-wrap {
+        padding: $defaultPadding;
+      }
+
+      &.list {
+        padding: 0;
+
+        .content-wrap {
+          padding: $defaultPadding / 3;
+        }
+      }
+
+      &.update, &.create {
+        padding: 0;
+
+        .content-wrap {
+          padding: 0 0 $defaultPadding * 2 0;
+        }
+      }
+    }
+  }
+
+  #footer {
+    padding: 20px 10px;
+    font-size: 13px;
+    color: $concrete;
+  }
+}
+
+#base {
+  display: table;
+  min-height: 100%;
+  height: 100%;
+  min-width: $mainWidth+$sidebarWidth;
+
+  #base-line {
+    display: table-row;
+
+    #sidebar {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    #main {
+      width: $mainWidth;
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+
+    #last-column {
+      vertical-align: top;
+      display: none;
+      width: $lastColumnWidth;
+
+      .last-columns-content {
+        padding: $defaultPadding;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mainWidth+$lastColumnWidth+$sidebarWidth+10px) {
+  #base {
+    #base-line{
+      #last-column{
+        display: table-cell;
+      }
+    }
+  }
+}
+
+#footer {
+  display: none;
+}
+
+@import "modules/translate";
+@import "modules/files";
+@import "parts/info";
+@import "parts/sticky";
+@import "parts/buttons";
+@import "parts/form";
+@import "parts/pager";
+@import "parts/toolbar";
+@import "parts/table";
+@import "parts/fixes";
+@import "parts/debugpanel";
+@import "parts/news";
+@import "parts/scroll";
+@import "parts/admin_login";
+@import "parts/fancybox";
+@import "parts/user_actions";
+@import "parts/flash";
+@import "parts/tooltip";

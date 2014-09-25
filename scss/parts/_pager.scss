@@ -1,0 +1,39 @@
+.pager-holder{
+  height: 30px;
+  line-height: 30px;
+
+  .pager {
+    @include reset-list;
+    @include clearfix;
+
+    text-align: center;
+    padding-left: $column-gutter / 2;
+
+    li {
+      @include inline-block;
+      margin: 0 2px;
+      float: left;
+
+      span, a {
+        padding: 5px 6px;
+        color: $darkGrey;
+        border: 1px solid transparent;
+
+        &:hover, &.selected {
+          @include border-radius(3px);
+          border: 1px solid $semiSoftGrey;
+        }
+      }
+    }
+  }
+
+  .page-size{
+    select {
+      height: 30px;
+      background-color: $lightGrey;
+      border: none;
+      padding: 5px 10px;
+      padding-right: 20px;
+    }
+  }
+}

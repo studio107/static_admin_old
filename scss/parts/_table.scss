@@ -1,0 +1,141 @@
+table {
+  width: 100%;
+  border: none;
+
+  thead {
+    border-bottom: 1px solid #f4f4f4;
+
+    tr {
+      th {
+        &.check.all {
+          width: 32px;
+        }
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $darkGrey;
+        a {
+          color: $darkGrey;
+          &:hover {
+            color: darken($darkGrey, 40%);
+          }
+        }
+      }
+    }
+  }
+
+  thead tr, tbody tr {
+    &.highlight {
+      background-color: $sun;
+    }
+  }
+
+  thead tr th.check, tbody tr td.check {
+    vertical-align: middle;
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  tbody, thead {
+    tr {
+      td.sorting {
+        cursor: move;
+      }
+      th.sorting {
+        width: 40px;
+      }
+      td, th {
+        &.td-id, &.th-id, &.check {
+          width: 40px;
+        }
+        &.check {
+          padding-left: $column-gutter / 2;
+
+          input {
+            display: none;
+          }
+
+          label {
+            font-family: glyphico;
+            font-weight: 400;
+            font-variant: normal;
+            color: $mediumGrey;
+
+            &:before {
+              content: "\e616";
+            }
+          }
+
+          input:checked + label {
+            color: $blue;
+            &:before {
+              content: "\e6c5";
+            }
+          }
+        }
+        &.actions {
+          width: 120px;
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      td {
+        font-size: 14px;
+        color: $darkGrey;
+
+        a {
+          color: $darkGrey;
+          &:hover {
+            color: lighten($darkGrey, 10%);
+          }
+        }
+
+        &.actions {
+          a {
+            color: $mediumGrey;
+            margin-right: 8px;
+
+            &:hover {
+              color: lighten($mediumGrey, 10%);
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tbody tr {
+    &:nth-of-type(even) {
+      background-color: #fafafa;
+    }
+
+    &:hover {
+      background-color: #F9F6E3;
+    }
+  }
+
+  thead tr th {
+    a {
+      display: block;
+    }
+    &:hover {
+      background-color: #F9F6E3;
+    }
+  }
+}
