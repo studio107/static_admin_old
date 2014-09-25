@@ -25,10 +25,14 @@ var imagesOpts = {
 var sassOpts = {
     includePaths: [
         'vendor/foundation/scss',
-        '/Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets',
         'vendor/mindy-sass/mindy'
     ]
 };
+if(process.env.USER == 'aleksandrgordeev') {
+    sassOpts.includePaths.push('/Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets');
+} else {
+    sassOpts.includePaths.push('/Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets');
+}
 
 var dst = {
     js: 'dist/js',
