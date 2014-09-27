@@ -11,9 +11,6 @@
     "flow.js": "~2",
     "Chart.js": "*",
     "mmodal": "1.0.0",
-    "codemirror": "~4.3.0",
-    "codemirror-formatting": "git@github.com:studio107/codemirror-formatting.git",
-    "mwysiwyg": "1.0",
     "fancybox": "~2.1.5",
     "pickmeup": ">=2.5.1",
     "tinymce107": ">=1.0.0"

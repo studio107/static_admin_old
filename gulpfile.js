@@ -56,10 +56,6 @@ var paths = {
         'vendor/flow.js/dist/flow.js',
 //        'vendor/Chart.js/Chart.js',
         'vendor/mmodal/js/jquery.mindy.modal.js',
-        'vendor/codemirror/lib/codemirror.js',
-        'vendor/codemirror/mode/xml/xml.js',
-        'vendor/codemirror-formatting/formatting.js',
-        'vendor/mwysiwyg/dist/js/1.0.0.all.js',
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
 
@@ -77,9 +73,6 @@ var paths = {
 
         'components/mtooltip/mtooltip.css',
 
-        'vendor/codemirror/lib/codemirror.css',
-        'vendor/codemirror/theme/monokai.css',
-        'vendor/mwysiwyg/dist/css/1.0.0.all.css',
         'vendor/select2/select2.css',
         'vendor/pen/src/pen.css',
         'vendor/pickmeup/css/pickmeup.css',
