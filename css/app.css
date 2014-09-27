@@ -6802,8 +6802,10 @@ table {
     vertical-align: middle; }
     table thead tr th.check input[type="checkbox"], table tbody tr td.check input[type="checkbox"] {
       margin: 0; }
-  table tbody tr td a {
-    text-decoration: underline; }
+  table tbody tr {
+    background-color: #fff !important; }
+    table tbody tr td a {
+      text-decoration: underline; }
   table tbody tr td.sorting, table thead tr td.sorting {
     cursor: move; }
   table tbody tr th.sorting, table thead tr th.sorting {
