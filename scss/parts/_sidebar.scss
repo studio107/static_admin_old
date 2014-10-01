@@ -6,9 +6,10 @@
 
   #sidebar-menu {
     @include reset-list;
+    padding-bottom: 20px;
 
     & > li {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-weight: 300;
     }
 
@@ -20,22 +21,36 @@
         background-color: $borderColor;
       }
 
-      span {
-        padding-left: $defaultPadding;
-        padding-right: $defaultPadding;
+      &>span {
         font-size: 15px;
         text-transform: capitalize;
         color: $darkGrey;
         background-color: $grey;
 
-        i {
+        $moduleNameHeight: 24px;
+        $imageSize: 16px;
+
+        .module-name {
+          color: $darkGrey;
+          display: block;
+          height: $moduleNameHeight;
+          line-height: $moduleNameHeight;
+          padding-left: $defaultPadding;
+          padding-right: $defaultPadding;
+        }
+
+        .module-image {
+          width: 16px;
+          height: $moduleNameHeight;
+          display: inline-block;
+          float: left;
           margin-right: 4px;
         }
       }
 
       ul {
         @include reset-list;
-        margin-top: 12px;
+        margin-top: 8px;
         display: inline-block;
         width: 100%;
 
@@ -80,6 +95,40 @@
             }
           }
         }
+      }
+
+      &:last-child {
+        .divider {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+$modules: core;
+
+.module-image {
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+  background-image: url('../images/modules/default.png');
+  background-repeat: no-repeat;
+
+  @each $module in $modules {
+    &.#{$module} {
+      background-image: url('../images/modules/#{$module}.png');
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+{
+  .module-image {
+    background-image: url('../images/modules/default@2x.png');
+
+    @each $module in $modules {
+      &.#{$module} {
+        background-image: url('../images/modules/#{$module}.png');
       }
     }
   }

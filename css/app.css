@@ -5990,23 +5990,33 @@ fieldset legend {
       border: 0 none;
       outline: 0 none;
       padding: 0;
-      list-style: none; }
+      list-style: none;
+      padding-bottom: 20px; }
       #wrapper #sidebar #sidebar-menu > li {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         font-weight: 300; }
       #wrapper #sidebar #sidebar-menu li .divider {
         display: block;
         height: 1px;
         margin: 0 30px;
         background-color: #D8D8D8; }
-      #wrapper #sidebar #sidebar-menu li span {
-        padding-left: 30px;
-        padding-right: 30px;
+      #wrapper #sidebar #sidebar-menu li > span {
         font-size: 15px;
         text-transform: capitalize;
         color: #616161;
         background-color: #f9f9f9; }
-        #wrapper #sidebar #sidebar-menu li span i {
+        #wrapper #sidebar #sidebar-menu li > span .module-name {
+          color: #616161;
+          display: block;
+          height: 24px;
+          line-height: 24px;
+          padding-left: 30px;
+          padding-right: 30px; }
+        #wrapper #sidebar #sidebar-menu li > span .module-image {
+          width: 16px;
+          height: 24px;
+          display: inline-block;
+          float: left;
           margin-right: 4px; }
       #wrapper #sidebar #sidebar-menu li ul {
         margin: 0;
@@ -6014,7 +6024,7 @@ fieldset legend {
         outline: 0 none;
         padding: 0;
         list-style: none;
-        margin-top: 12px;
+        margin-top: 8px;
         display: inline-block;
         width: 100%; }
         #wrapper #sidebar #sidebar-menu li ul li {
@@ -6048,6 +6058,20 @@ fieldset legend {
               position: relative;
               top: 2px;
               font-size: 17px; }
+      #wrapper #sidebar #sidebar-menu li:last-child .divider {
+        display: none; }
+  #wrapper .module-image {
+    background-position: 50% 50%;
+    background-size: 16px 16px;
+    background-image: url('../images/modules/default.png');
+    background-repeat: no-repeat; }
+    #wrapper .module-image.core {
+      background-image: url('../images/modules/core.png'); }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #wrapper .module-image {
+      background-image: url('../images/modules/default@2x.png'); }
+      #wrapper .module-image.core {
+        background-image: url('../images/modules/core.png'); } }
   #wrapper #breadcrumbs {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -6548,10 +6572,11 @@ textarea {
   .form-inline-delete:hover {
     color: #a00; }
 
-.pager-holder {
+.pager-container {
   height: 30px;
-  line-height: 30px; }
-  .pager-holder .pager {
+  line-height: 30px;
+  padding-top: 20px; }
+  .pager-container .pager {
     margin: 0;
     border: 0 none;
     outline: 0 none;
@@ -6560,33 +6585,32 @@ textarea {
     *zoom: 1;
     text-align: center;
     padding-left: 0.9375rem; }
-    .pager-holder .pager:before, .pager-holder .pager:after {
+    .pager-container .pager:before, .pager-container .pager:after {
       display: table;
       content: "";
       line-height: 0; }
-    .pager-holder .pager:after {
+    .pager-container .pager:after {
       clear: both; }
-    .pager-holder .pager li {
+    .pager-container .pager li {
       display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
       zoom: 1;
       *display: inline;
-      margin: 0 2px;
-      float: left; }
-      .pager-holder .pager li span, .pager-holder .pager li a {
+      margin: 0 2px; }
+      .pager-container .pager li span, .pager-container .pager li a {
         padding: 5px 6px;
         color: #616161;
         border: 1px solid transparent; }
-        .pager-holder .pager li span:hover, .pager-holder .pager li span.selected, .pager-holder .pager li a:hover, .pager-holder .pager li a.selected {
+        .pager-container .pager li span:hover, .pager-container .pager li span.selected, .pager-container .pager li a:hover, .pager-container .pager li a.selected {
           -webkit-border-radius: 3px;
           -moz-border-radius: 3px;
           -ms-border-radius: 3px;
           -o-border-radius: 3px;
           border-radius: 3px;
           border: 1px solid #e2e2e2; }
-  .pager-holder .page-size select {
+  .pager-container .page-size select {
     height: 30px;
     background-color: #f5f5f5;
     border: none;

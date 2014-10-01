@@ -1,6 +1,7 @@
-.pager-holder{
+.pager-container{
   height: 30px;
   line-height: 30px;
+  padding-top: 20px;
 
   .pager {
     @include reset-list;
@@ -12,7 +13,6 @@
     li {
       @include inline-block;
       margin: 0 2px;
-      float: left;
 
       span, a {
         padding: 5px 6px;
