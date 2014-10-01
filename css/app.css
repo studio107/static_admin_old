@@ -6067,11 +6067,63 @@ fieldset legend {
     background-repeat: no-repeat; }
     #wrapper .module-image.core {
       background-image: url('../images/modules/core.png'); }
+    #wrapper .module-image.faq {
+      background-image: url('../images/modules/faq.png'); }
+    #wrapper .module-image.mail {
+      background-image: url('../images/modules/mail.png'); }
+    #wrapper .module-image.meta {
+      background-image: url('../images/modules/meta.png'); }
+    #wrapper .module-image.menu {
+      background-image: url('../images/modules/menu.png'); }
+    #wrapper .module-image.offices {
+      background-image: url('../images/modules/offices.png'); }
+    #wrapper .module-image.partners {
+      background-image: url('../images/modules/partners.png'); }
+    #wrapper .module-image.photo {
+      background-image: url('../images/modules/photo.png'); }
+    #wrapper .module-image.pages {
+      background-image: url('../images/modules/pages.png'); }
+    #wrapper .module-image.redirect {
+      background-image: url('../images/modules/redirect.png'); }
+    #wrapper .module-image.reviews {
+      background-image: url('../images/modules/reviews.png'); }
+    #wrapper .module-image.sites {
+      background-image: url('../images/modules/sites.png'); }
+    #wrapper .module-image.slider {
+      background-image: url('../images/modules/slider.png'); }
+    #wrapper .module-image.user {
+      background-image: url('../images/modules/user.png'); }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #wrapper .module-image {
       background-image: url('../images/modules/default@2x.png'); }
       #wrapper .module-image.core {
-        background-image: url('../images/modules/core.png'); } }
+        background-image: url('../images/modules/core.png'); }
+      #wrapper .module-image.faq {
+        background-image: url('../images/modules/faq.png'); }
+      #wrapper .module-image.mail {
+        background-image: url('../images/modules/mail.png'); }
+      #wrapper .module-image.meta {
+        background-image: url('../images/modules/meta.png'); }
+      #wrapper .module-image.menu {
+        background-image: url('../images/modules/menu.png'); }
+      #wrapper .module-image.offices {
+        background-image: url('../images/modules/offices.png'); }
+      #wrapper .module-image.partners {
+        background-image: url('../images/modules/partners.png'); }
+      #wrapper .module-image.photo {
+        background-image: url('../images/modules/photo.png'); }
+      #wrapper .module-image.pages {
+        background-image: url('../images/modules/pages.png'); }
+      #wrapper .module-image.redirect {
+        background-image: url('../images/modules/redirect.png'); }
+      #wrapper .module-image.reviews {
+        background-image: url('../images/modules/reviews.png'); }
+      #wrapper .module-image.sites {
+        background-image: url('../images/modules/sites.png'); }
+      #wrapper .module-image.slider {
+        background-image: url('../images/modules/slider.png'); }
+      #wrapper .module-image.user {
+        background-image: url('../images/modules/user.png'); } }
   #wrapper #breadcrumbs {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
