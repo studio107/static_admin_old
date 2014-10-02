@@ -53,6 +53,7 @@
     .file-check{
       width: 35px;
       vertical-align: middle;
+      padding-left: 0;
 
       input {
         margin: 0;
@@ -74,6 +75,7 @@
 
   .actions-row {
     max-width: none;
+    margin: 0 -15px;
   }
 
   .messages {
@@ -95,6 +97,19 @@
         background-color: #f04124;
       }
 
+    }
+  }
+}
+
+.image-field-list {
+  li {
+    height: 100px;
+    display: inline-block;
+    line-height: 100px;
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
     }
   }
 }

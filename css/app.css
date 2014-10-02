@@ -6368,7 +6368,8 @@ fieldset legend {
     width: 35px; }
   .file-manager table .file-check {
     width: 35px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding-left: 0; }
     .file-manager table .file-check input {
       margin: 0; }
   .file-manager table .file-name {
@@ -6378,7 +6379,8 @@ fieldset legend {
   .file-manager table a {
     text-decoration: none; }
   .file-manager .actions-row {
-    max-width: none; }
+    max-width: none;
+    margin: 0 -15px; }
   .file-manager .messages {
     -webkit-transition: all 0.4s;
     -webkit-transition-delay: 0s;
@@ -6402,6 +6404,14 @@ fieldset legend {
         background-color: #57b2d8; }
       .file-manager .messages .notification.error {
         background-color: #f04124; }
+
+.image-field-list li {
+  height: 100px;
+  display: inline-block;
+  line-height: 100px; }
+  .image-field-list li img {
+    vertical-align: middle;
+    display: inline-block; }
 
 .model-info {
   margin-left: -15px;

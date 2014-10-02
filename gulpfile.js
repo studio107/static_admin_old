@@ -60,6 +60,7 @@ var paths = {
         'vendor/pickmeup/js/jquery.pickmeup.js',
 
         'components/mtooltip/mtooltip.js',
+        'components/jquery.dragsort-0.5.2.min.js',
 
         'js/*.js'
     ],
