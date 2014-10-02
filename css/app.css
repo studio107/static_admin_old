@@ -6093,6 +6093,16 @@ fieldset legend {
       background-image: url('../images/modules/slider.png'); }
     #wrapper .module-image.user {
       background-image: url('../images/modules/user.png'); }
+    #wrapper .module-image.blog {
+      background-image: url('../images/modules/blog.png'); }
+    #wrapper .module-image.files {
+      background-image: url('../images/modules/files.png'); }
+    #wrapper .module-image.translate {
+      background-image: url('../images/modules/translate.png'); }
+    #wrapper .module-image.catalog {
+      background-image: url('../images/modules/catalog.png'); }
+    #wrapper .module-image.calc {
+      background-image: url('../images/modules/calc.png'); }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #wrapper .module-image {
       background-image: url('../images/modules/default@2x.png'); }
@@ -6123,7 +6133,17 @@ fieldset legend {
       #wrapper .module-image.slider {
         background-image: url('../images/modules/slider.png'); }
       #wrapper .module-image.user {
-        background-image: url('../images/modules/user.png'); } }
+        background-image: url('../images/modules/user.png'); }
+      #wrapper .module-image.blog {
+        background-image: url('../images/modules/blog.png'); }
+      #wrapper .module-image.files {
+        background-image: url('../images/modules/files.png'); }
+      #wrapper .module-image.translate {
+        background-image: url('../images/modules/translate.png'); }
+      #wrapper .module-image.catalog {
+        background-image: url('../images/modules/catalog.png'); }
+      #wrapper .module-image.calc {
+        background-image: url('../images/modules/calc.png'); } }
   #wrapper #breadcrumbs {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
