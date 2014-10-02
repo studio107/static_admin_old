@@ -9472,7 +9472,7 @@ $.ajaxSetup({
                 'dataType': 'html',
                 'success': function (data) {
                     var wrapped_data = $('<div/>').append(data);
-                    $('.files').replaceWith(wrapped_data.find('.files'));
+                    $(me.element).find('.files').replaceWith(wrapped_data.find('.files'));
                     me.currentPath = path;
                 }
             });

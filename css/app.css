@@ -7286,6 +7286,11 @@ p {
     .user-action-list li .user {
       color: #a00; }
 
+.user-actions-empty {
+  font-size: 13px;
+  color: #616161;
+  line-height: 1.3; }
+
 .flash-list {
   margin: 0;
   border: 0 none;
