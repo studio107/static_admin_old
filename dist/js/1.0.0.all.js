@@ -9502,11 +9502,15 @@ $.ajaxSetup({
 
     $.extend(filesField, {
         options: {
+            listId: undefined,
+
             uploadUrl: undefined,
             sortUrl: undefined,
-            listId: undefined,
+            deleteUrl: undefined,
+
             flowData: {},
-            sortData: {}
+            sortData: {},
+            deleteData: {}
         },
         element: undefined,
         init: function (element, options) {
@@ -9515,10 +9519,23 @@ $.ajaxSetup({
             this.element = element;
             this.options = $.extend(this.options, options);
 
+            this.bind();
             this.initUploader();
             this.initList();
 
             return this;
+        },
+        bind: function()
+        {
+            var me = this;
+            $(document).on('click', '#' + me.options.listId + ' .remove', function(e){
+                e.preventDefault();
+                var $item = $(this).closest('li');
+                if ($item.data('pk')) {
+                    me.remove($item.data('pk'));
+                }
+                return false;
+            });
         },
         initUploader: function () {
             var me = this;
@@ -9580,18 +9597,35 @@ $.ajaxSetup({
         sort: function() {
             var pk = [];
             var me = this;
+            var data = me.options.sortData;
+
             $("#" + this.options.listId).find('li').each(function(){
                 if ($(this).data('pk')) {
                     pk.push($(this).data('pk'));
                 }
             });
-            var data = me.options.sortData;
+
             data['pk'] = pk;
 
             $.ajax({
                 'type': 'post',
                 'url': me.options.sortUrl,
                 'data': data
+            });
+        },
+        remove: function(pk) {
+            var me = this;
+            var data = me.options.deleteData;
+            data['pk'] = pk;
+            $.ajax({
+                'type': 'post',
+                'url': me.options.deleteUrl,
+                'data': data,
+                'success': function(){
+                    $('#' + me.options.listId).find('[data-pk="'+pk+'"]').fadeOut(300, function(){
+                        $(this).remove();
+                    });
+                }
             });
         }
     });

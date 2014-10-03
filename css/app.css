@@ -6290,41 +6290,52 @@ fieldset legend {
 #footer {
   display: none; }
 
-.message-row input {
-  margin-bottom: 0; }
-.message-row .message-to {
-  position: relative; }
-  .message-row .message-to .success-saved {
-    display: none;
-    position: absolute;
+.message-row {
+  margin-bottom: 5px; }
+  .message-row input {
+    margin-bottom: 0; }
+  .message-row .message-to {
+    position: relative; }
+    .message-row .message-to .success-saved {
+      -webkit-transition: all 0.5s;
+      -webkit-transition-delay: 0s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      opacity: 0;
+      right: -5px;
+      display: block;
+      position: absolute;
+      line-height: 15px;
+      top: 9px;
+      width: 20px;
+      height: 20px;
+      background-color: #8cc88c;
+      text-align: center;
+      border-radius: 3px 0 0 3px;
+      color: #ffffff;
+      font-size: 12px; }
+      .message-row .message-to .success-saved i {
+        position: relative;
+        top: 3px; }
+    .message-row .message-to .move {
+      position: absolute;
+      line-height: 15px;
+      left: -4px;
+      top: 9px;
+      width: 20px;
+      height: 20px;
+      background-color: #8cc88c;
+      text-align: center;
+      border-radius: 3px 0 0 3px;
+      color: #ffffff;
+      cursor: pointer; }
+      .message-row .message-to .move i {
+        position: relative;
+        top: 2px; }
+  .message-row.saved .message-to .success-saved {
     right: 15px;
-    top: 9px;
-    width: 20px;
-    height: 20px;
-    background-color: #8cc88c;
-    text-align: center;
-    border-radius: 3px 0 0 3px;
-    color: #ffffff;
-    font-size: 12px; }
-    .message-row .message-to .success-saved i {
-      position: relative;
-      top: 3px; }
-  .message-row .message-to .move {
-    position: absolute;
-    left: -4px;
-    top: 9px;
-    width: 20px;
-    height: 20px;
-    background-color: #8cc88c;
-    text-align: center;
-    border-radius: 3px 0 0 3px;
-    color: #ffffff;
-    cursor: pointer; }
-    .message-row .message-to .move i {
-      position: relative;
-      top: 2px; }
-.message-row.saved .message-to .success-saved {
-  display: block; }
+    opacity: 1; }
 
 .message-row.hidden {
   display: none; }
@@ -6405,13 +6416,45 @@ fieldset legend {
       .file-manager .messages .notification.error {
         background-color: #f04124; }
 
+.files-frop {
+  border: 2px dashed #ddd;
+  padding: 20px;
+  margin-bottom: 20px; }
+  .files-frop .info {
+    margin-bottom: 10px;
+    text-align: center; }
+  .files-frop .progress {
+    border: none;
+    padding: 0;
+    height: 4px;
+    margin: 0; }
+  .files-frop input {
+    width: auto; }
+
 .image-field-list li {
-  height: 100px;
   display: inline-block;
-  line-height: 100px; }
+  position: relative; }
   .image-field-list li img {
     vertical-align: middle;
     display: inline-block; }
+  .image-field-list li .remove {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 3px;
+    right: 13px;
+    display: block;
+    font-size: 20px;
+    line-height: 16px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    background-color: #fff; }
+  .image-field-list li.empty {
+    border: 2px dashed #ccc; }
 
 .model-info {
   margin-left: -15px;
