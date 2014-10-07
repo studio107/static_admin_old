@@ -9094,15 +9094,6 @@ $(function () {
     $(document).foundation();
     $('textarea').autosize();
 
-    $(document).on('click', '.action-delete', function(e) {
-        if(confirm('Please confirm action')) {
-            return e;
-        } else {
-            e.preventDefault();
-            return false;
-        }
-    });
-
     $(document).on('click', "[data-toggle]", function() {
         $(this).next().toggle();
     });
@@ -9148,6 +9139,9 @@ $(function () {
     });
 });
 
+$(document).on('click', '[data-confirm]', function(e) {
+    return confirm($(this).data('confirm'));
+});
 // using jQuery
 function getCookie(name) {
     var cookieValue = null;
@@ -9723,11 +9717,6 @@ $(document).on('click', '.form-inline-delete', function(e) {
         }
     });
     return false;
-});
-
-
-$(document).on('click', '[data-confirm]', function(e) {
-    return confirm($(this).data('confirm'));
 });
 $(function() {
     $('[name*="metaCustom"]').on('change', function (e) {

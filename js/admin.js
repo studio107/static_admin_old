@@ -2,15 +2,6 @@ $(function () {
     $(document).foundation();
     $('textarea').autosize();
 
-    $(document).on('click', '.action-delete', function(e) {
-        if(confirm('Please confirm action')) {
-            return e;
-        } else {
-            e.preventDefault();
-            return false;
-        }
-    });
-
     $(document).on('click', "[data-toggle]", function() {
         $(this).next().toggle();
     });
@@ -54,4 +45,8 @@ $(function () {
         $(this).parent().fadeOut();
         return false;
     });
+});
+
+$(document).on('click', '[data-confirm]', function(e) {
+    return confirm($(this).data('confirm'));
 });
