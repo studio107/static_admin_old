@@ -9094,11 +9094,11 @@ $(function () {
     $(document).foundation();
     $('textarea').autosize();
 
-    $(document).on('click', "[data-toggle]", function() {
+    $(document).on('click', "[data-toggle]", function () {
         $(this).next().toggle();
     });
 
-    $(document).on('click', '.mmodal', function(e) {
+    $(document).on('click', '.mmodal', function (e) {
         e.preventDefault();
         var $this = $(this);
         $this.mmodal({
@@ -9111,7 +9111,7 @@ $(function () {
         types = ['jpg', 'jpeg', 'png', 'gif'];
     for (var i = 0; i < types.length; i++) {
         selector += "a[href$='." + types[i].toLowerCase() + "'],a[href$='." + types[i].toUpperCase() + "']";
-        if(i+1 != types.length) {
+        if (i + 1 != types.length) {
             selector += ",";
         }
     }
@@ -9131,7 +9131,7 @@ $(function () {
 
     $.mtooltip('[rel~=tooltip]');
 
-    $(document).on('click', '.flash-list .close', function(e) {
+    $(document).on('click', '.flash-list .close', function (e) {
         e.preventDefault();
         $('.tooltip').fadeOut();
         $(this).parent().fadeOut();
@@ -9139,7 +9139,7 @@ $(function () {
     });
 });
 
-$(document).on('click', '[data-confirm]', function(e) {
+$(document).on('click', '[data-confirm]', function (e) {
     return confirm($(this).data('confirm'));
 });
 // using jQuery

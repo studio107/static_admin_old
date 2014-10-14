@@ -58,7 +58,6 @@ var paths = {
         'vendor/mmodal/js/jquery.mindy.modal.js',
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
-        'vendor/sweetalert/lib/sweet-alert.js',
 
         'components/mtooltip/mtooltip.js',
         'components/jquery.dragsort-0.5.2.min.js',

@@ -13,6 +13,7 @@
     "mmodal": "1.0.0",
     "fancybox": "~2.1.5",
     "pickmeup": ">=2.5.1",
-    "tinymce107": ">=1.0.0"
+    "tinymce107": ">=1.0.0",
+    "sweetalert": "~0.2.0"
   }
 }
