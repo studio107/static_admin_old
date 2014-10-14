@@ -53,6 +53,7 @@
     .file-check{
       width: 35px;
       vertical-align: middle;
+      padding-left: 0;
 
       input {
         margin: 0;
@@ -74,6 +75,7 @@
 
   .actions-row {
     max-width: none;
+    margin: 0 -15px;
   }
 
   .messages {
@@ -95,6 +97,62 @@
         background-color: #f04124;
       }
 
+    }
+  }
+}
+
+.files-frop {
+  border: 2px dashed #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .info {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .progress {
+    border: none;
+    padding: 0;
+    height: 4px;
+    margin: 0;
+  }
+
+  input {
+    width: auto;
+  }
+}
+
+.image-field-list {
+  li {
+    display: inline-block;
+    position: relative;
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .remove {
+      @include border-radius(10px);
+
+      position: absolute;
+      top: 3px;
+      right: 13px;
+      display: block;
+
+      font-size: 20px;
+      line-height: 16px;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+
+      background-color: #fff;
+
+    }
+
+    &.empty {
+      border: 2px dashed #ccc;
     }
   }
 }
