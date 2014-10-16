@@ -6702,11 +6702,11 @@ textarea {
   .form-inline-delete:hover {
     color: #a00; }
 
-.pager-container {
+.pager-container, .pager-holder {
   height: 30px;
   line-height: 30px;
   padding-top: 20px; }
-  .pager-container .pager {
+  .pager-container .pager, .pager-holder .pager {
     margin: 0;
     border: 0 none;
     outline: 0 none;
@@ -6715,13 +6715,13 @@ textarea {
     *zoom: 1;
     text-align: center;
     padding-left: 0.9375rem; }
-    .pager-container .pager:before, .pager-container .pager:after {
+    .pager-container .pager:before, .pager-container .pager:after, .pager-holder .pager:before, .pager-holder .pager:after {
       display: table;
       content: "";
       line-height: 0; }
-    .pager-container .pager:after {
+    .pager-container .pager:after, .pager-holder .pager:after {
       clear: both; }
-    .pager-container .pager li {
+    .pager-container .pager li, .pager-holder .pager li {
       display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
@@ -6729,18 +6729,18 @@ textarea {
       zoom: 1;
       *display: inline;
       margin: 0 2px; }
-      .pager-container .pager li span, .pager-container .pager li a {
+      .pager-container .pager li span, .pager-container .pager li a, .pager-holder .pager li span, .pager-holder .pager li a {
         padding: 5px 6px;
         color: #616161;
         border: 1px solid transparent; }
-        .pager-container .pager li span:hover, .pager-container .pager li span.selected, .pager-container .pager li a:hover, .pager-container .pager li a.selected {
+        .pager-container .pager li span:hover, .pager-container .pager li span.selected, .pager-container .pager li a:hover, .pager-container .pager li a.selected, .pager-holder .pager li span:hover, .pager-holder .pager li span.selected, .pager-holder .pager li a:hover, .pager-holder .pager li a.selected {
           -webkit-border-radius: 3px;
           -moz-border-radius: 3px;
           -ms-border-radius: 3px;
           -o-border-radius: 3px;
           border-radius: 3px;
           border: 1px solid #e2e2e2; }
-  .pager-container .page-size select {
+  .pager-container .page-size select, .pager-holder .page-size select {
     height: 30px;
     background-color: #f5f5f5;
     border: none;
