@@ -6318,21 +6318,26 @@ fieldset legend {
       .message-row .message-to .success-saved i {
         position: relative;
         top: 3px; }
-    .message-row .message-to .move {
+    .message-row .message-to .auto, .message-row .message-to .move {
       position: absolute;
       line-height: 15px;
-      left: -4px;
-      top: 9px;
       width: 20px;
-      height: 20px;
+      height: 18px;
       background-color: #8cc88c;
       text-align: center;
       border-radius: 3px 0 0 3px;
       color: #ffffff;
-      cursor: pointer; }
-      .message-row .message-to .move i {
+      cursor: pointer;
+      font-size: 12px; }
+      .message-row .message-to .auto i, .message-row .message-to .move i {
         position: relative;
         top: 2px; }
+    .message-row .message-to .move {
+      left: -4px;
+      top: 0px; }
+    .message-row .message-to .auto {
+      left: -4px;
+      bottom: 0; }
   .message-row.saved .message-to .success-saved {
     right: 15px;
     opacity: 1; }
