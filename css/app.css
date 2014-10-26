@@ -6561,6 +6561,29 @@ fieldset {
   padding-left: 0;
   padding-right: 0; }
 
+.form-errors {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #ffd7cf; }
+  .form-errors li {
+    font-weight: 700; }
+    .form-errors li ul {
+      margin: 0;
+      border: 0 none;
+      outline: 0 none;
+      padding: 0;
+      list-style: none;
+      font-size: 14px; }
+      .form-errors li ul li {
+        font-weight: 400;
+        margin-left: 15px; }
+
 form.save-update .buttons-block {
   padding: 0.9375rem; }
   form.save-update .buttons-block .button {
