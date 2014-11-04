@@ -9638,6 +9638,16 @@ if (!Date.now) {
     };
 }
 
+$(document).on('change', [
+    '.inline-form-item input',
+    '.inline-form-item textarea',
+    '.inline-form-item select'
+].join(', '), function(e) {
+    var $this = $(this),
+        $form = $this.closest('.inline-form-item');
+    $form.find('._changed').val(true);
+});
+
 $(document).on('click', '.inline-add', function(e) {
     e.preventDefault();
 
@@ -9656,7 +9666,7 @@ $(document).on('click', '.inline-add', function(e) {
 
     var $clone = $source.clone();
     $clone.addClass('form-inline-section').attr({
-        id: id.slice(0, -1) + cloneIndex + '-container'
+        id: id.slice(0, 0) + cloneIndex + '-container'
     });
 
     $clone.find('.actions input').attr({

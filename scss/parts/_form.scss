@@ -47,6 +47,14 @@ textarea {
 }
 
 form {
+  .current-file-container {
+    a {
+      font-size: 12px;
+      margin: 8px 0;
+      color: #aaa;
+    }
+  }
+
   &.save-update {
     padding: 0;
     margin-top: 15px;
@@ -85,8 +93,11 @@ form {
     }
 
     .inline-form {
+      padding: $defaultPadding;
+
       .form-inline-section {
         padding: 5px 0 10px;
+        margin-bottom: 20px;
         border-bottom: 1px solid $clouds;
 
         select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"] {

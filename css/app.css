@@ -6601,6 +6601,10 @@ form.save-update .buttons-block {
 textarea {
   max-width: 100%; }
 
+form .current-file-container a {
+  font-size: 12px;
+  margin: 8px 0;
+  color: #aaa; }
 form.save-update {
   padding: 0;
   margin-top: 15px; }
@@ -6625,38 +6629,41 @@ form.save-update {
       border-top: none; }
   form.save-update select, form.save-update input[type="text"], form.save-update input[type="password"], form.save-update input[type="email"], form.save-update input[type="phone"] {
     width: 50%; }
-  form.save-update .inline-form .form-inline-section {
-    padding: 5px 0 10px;
-    border-bottom: 1px solid #f0f0f0; }
-    form.save-update .inline-form .form-inline-section select, form.save-update .inline-form .form-inline-section input[type="text"], form.save-update .inline-form .form-inline-section input[type="password"], form.save-update .inline-form .form-inline-section input[type="email"], form.save-update .inline-form .form-inline-section input[type="phone"] {
-      width: 100%; }
-    form.save-update .inline-form .form-inline-section a.current-file {
-      white-space: nowrap;
-      overflow: hidden;
-      -webkit-text-overflow: ellipsis;
-      -moz-text-overflow: ellipsis;
-      -ms-text-overflow: ellipsis;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      display: block; }
-    form.save-update .inline-form .form-inline-section .form-block {
-      margin: 0; }
-    form.save-update .inline-form .form-inline-section table {
-      margin: 0; }
-      form.save-update .inline-form .form-inline-section table tr:hover {
-        background-color: transparent; }
-      form.save-update .inline-form .form-inline-section table tr td {
-        vertical-align: top;
-        padding: 0 6px; }
-        form.save-update .inline-form .form-inline-section table tr td p {
-          font-size: 14px;
-          line-height: 1.2; }
-        form.save-update .inline-form .form-inline-section table tr td:first-child {
-          padding-left: 0; }
-        form.save-update .inline-form .form-inline-section table tr td:last-child {
-          padding-right: 0; }
-  form.save-update .inline-form .inline-add {
-    margin-top: 10px !important; }
+  form.save-update .inline-form {
+    padding: 30px; }
+    form.save-update .inline-form .form-inline-section {
+      padding: 5px 0 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #f0f0f0; }
+      form.save-update .inline-form .form-inline-section select, form.save-update .inline-form .form-inline-section input[type="text"], form.save-update .inline-form .form-inline-section input[type="password"], form.save-update .inline-form .form-inline-section input[type="email"], form.save-update .inline-form .form-inline-section input[type="phone"] {
+        width: 100%; }
+      form.save-update .inline-form .form-inline-section a.current-file {
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: block; }
+      form.save-update .inline-form .form-inline-section .form-block {
+        margin: 0; }
+      form.save-update .inline-form .form-inline-section table {
+        margin: 0; }
+        form.save-update .inline-form .form-inline-section table tr:hover {
+          background-color: transparent; }
+        form.save-update .inline-form .form-inline-section table tr td {
+          vertical-align: top;
+          padding: 0 6px; }
+          form.save-update .inline-form .form-inline-section table tr td p {
+            font-size: 14px;
+            line-height: 1.2; }
+          form.save-update .inline-form .form-inline-section table tr td:first-child {
+            padding-left: 0; }
+          form.save-update .inline-form .form-inline-section table tr td:last-child {
+            padding-right: 0; }
+    form.save-update .inline-form .inline-add {
+      margin-top: 10px !important; }
 form .form-block {
   margin-bottom: 15px; }
 form label {
