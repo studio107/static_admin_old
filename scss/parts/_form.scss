@@ -7,11 +7,17 @@ fieldset {
 }
 
 .form-errors {
-  @include border-radius;
+  @include reset-list;
   font-size: 14px;
   padding: 10px;
-  margin: 20px 0;
+  margin: $defaultPadding;
+  border: 1px solid #ff443a;
   background-color: #ffd7cf;
+
+  &.inline-errors {
+    margin: $defaultPadding 0;
+  }
+
   li {
     font-weight: 700;
     ul {
@@ -23,12 +29,24 @@ fieldset {
       }
     }
   }
+
+  .form-errors-inline {
+    @include reset-list;
+
+    li {
+      margin-left: 15px;
+    }
+
+    .inline-name {
+      font-weight: 700;
+    }
+  }
 }
 
-form.save-update{
-  .buttons-block{
+form.save-update {
+  .buttons-block {
     padding: $column-gutter/2;
-    .button{
+    .button {
       margin-bottom: 0;
       @include border-radius(3px);
     }
@@ -146,11 +164,17 @@ form {
 
       .inline-add {
         margin-top: 10px !important;
+        display: block;
+        border: 1px solid #ccc;
+        padding: 6px;
+        text-align: center;
+        color: #353535;
+        background-color: #f4f4f4;
       }
     }
   }
 
-  .form-block{
+  .form-block {
     margin-bottom: 15px;
   }
 
@@ -160,7 +184,7 @@ form {
     margin-bottom: 4px;
   }
 
-  ul.error{
+  ul.error {
     list-style: none;
     margin: 0;
     color: $validationColor;

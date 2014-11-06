@@ -9633,7 +9633,7 @@ $.ajaxSetup({
 
 })($);
 if (!Date.now) {
-    Date.now = function() {
+    Date.now = function () {
         return new Date().getTime();
     };
 }
@@ -9642,25 +9642,25 @@ $(document).on('change', [
     '.inline-form-item input',
     '.inline-form-item textarea',
     '.inline-form-item select'
-].join(', '), function(e) {
+].join(', '), function (e) {
     var $this = $(this),
         $form = $this.closest('.inline-form-item');
     $form.find('._changed').val(true);
 });
 
-$(document).on('click', '.inline-add', function(e) {
+$(document).on('click', '.inline-add', function (e) {
     e.preventDefault();
 
-    var $this = $(this),
-        $container = $this.closest('.inline-form');
+    var $this = $(this);
 
     var id = $this.data('id'),
-        cloneIndex = $container.children('section').length,
-        $source = $this.prev(),
+        $source = $($('#' + id).html()),
+        cloneIndex = $this.closest('.inline-form').children('section').length,
         name = $(this).data('name'),
         regex = /^(.*)[(\d)](.*)+$/i;
 
-    if($source.length > 1) {
+    console.log($source);
+    if ($source.length > 1) {
         return;
     }
 
@@ -9675,17 +9675,17 @@ $(document).on('click', '.inline-add', function(e) {
     });
 
     $clone
-        .find('input, button, textarea, select, label').each(function(i, element) {
+        .find('input, button, textarea, select, label').each(function (i, element) {
             var $el = $(element),
                 name = $el.attr('name'),
                 id = $el.attr('id'),
                 forAttr = $el.attr('for');
 
-            if(name && id) {
+            if (name && id) {
                 var nameData = name.match(regex),
                     idData = id.match(regex);
 
-                if(nameData && idData) {
+                if (nameData && idData) {
                     $el.attr({
                         id: idData[1] + cloneIndex + idData[2],
                         name: nameData[1] + cloneIndex + nameData[2],
@@ -9695,9 +9695,9 @@ $(document).on('click', '.inline-add', function(e) {
                 }
             }
 
-            if(forAttr) {
+            if (forAttr) {
                 var forData = forAttr.match(regex);
-                if(forData) {
+                if (forData) {
                     $el.attr({
                         'for': forData[1] + cloneIndex + forData[2]
                     });
@@ -9709,23 +9709,21 @@ $(document).on('click', '.inline-add', function(e) {
     $clone.find('.form-inline-delete').show();
     $clone.insertBefore($this);
 
-    if($this.data('max') >= $('.form-inline-section').length) {
+    if ($this.data('max') >= $('.form-inline-section').length) {
         $this.hide();
     }
 
     return false;
 });
 
-$(document).on('click', '.form-inline-delete', function(e) {
+$(document).on('click', '.form-inline-delete', function (e) {
     e.preventDefault();
     var $target = $(this).closest('.form-inline-section'),
         $addInlineButton = $('.inline-add');
-    $target.fadeOut(function() {
-        $target.remove();
-        if($addInlineButton.data('max') > $('.form-inline-section').length) {
-            $addInlineButton.show();
-        }
-    });
+    $target.remove();
+    if ($addInlineButton.data('max') > $('.form-inline-section').length) {
+        $addInlineButton.show();
+    }
     return false;
 });
 $(function() {

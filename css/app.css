@@ -6562,15 +6562,18 @@ fieldset {
   padding-right: 0; }
 
 .form-errors {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  margin: 0;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0;
+  list-style: none;
   font-size: 14px;
   padding: 10px;
-  margin: 20px 0;
+  margin: 30px;
+  border: 1px solid #ff443a;
   background-color: #ffd7cf; }
+  .form-errors.inline-errors {
+    margin: 30px 0; }
   .form-errors li {
     font-weight: 700; }
     .form-errors li ul {
@@ -6583,6 +6586,16 @@ fieldset {
       .form-errors li ul li {
         font-weight: 400;
         margin-left: 15px; }
+  .form-errors .form-errors-inline {
+    margin: 0;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0;
+    list-style: none; }
+    .form-errors .form-errors-inline li {
+      margin-left: 15px; }
+    .form-errors .form-errors-inline .inline-name {
+      font-weight: 700; }
 
 form.save-update .buttons-block {
   padding: 0.9375rem; }
@@ -6663,7 +6676,13 @@ form.save-update {
           form.save-update .inline-form .form-inline-section table tr td:last-child {
             padding-right: 0; }
     form.save-update .inline-form .inline-add {
-      margin-top: 10px !important; }
+      margin-top: 10px !important;
+      display: block;
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+      color: #353535;
+      background-color: #f4f4f4; }
 form .form-block {
   margin-bottom: 15px; }
 form label {
