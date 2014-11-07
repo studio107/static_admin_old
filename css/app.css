@@ -6063,87 +6063,87 @@ fieldset legend {
   #wrapper .module-image {
     background-position: 50% 50%;
     background-size: 16px 16px;
-    background-image: url('../images/modules/default.png');
+    background-image: url("../../images/modules/default.png");
     background-repeat: no-repeat; }
     #wrapper .module-image.core {
-      background-image: url('../images/modules/core.png'); }
+      background-image: url("../../images/modules/core.png"); }
     #wrapper .module-image.faq {
-      background-image: url('../images/modules/faq.png'); }
+      background-image: url("../../images/modules/faq.png"); }
     #wrapper .module-image.mail {
-      background-image: url('../images/modules/mail.png'); }
+      background-image: url("../../images/modules/mail.png"); }
     #wrapper .module-image.meta {
-      background-image: url('../images/modules/meta.png'); }
+      background-image: url("../../images/modules/meta.png"); }
     #wrapper .module-image.menu {
-      background-image: url('../images/modules/menu.png'); }
+      background-image: url("../../images/modules/menu.png"); }
     #wrapper .module-image.offices {
-      background-image: url('../images/modules/offices.png'); }
+      background-image: url("../../images/modules/offices.png"); }
     #wrapper .module-image.partners {
-      background-image: url('../images/modules/partners.png'); }
+      background-image: url("../../images/modules/partners.png"); }
     #wrapper .module-image.photo {
-      background-image: url('../images/modules/photo.png'); }
+      background-image: url("../../images/modules/photo.png"); }
     #wrapper .module-image.pages {
-      background-image: url('../images/modules/pages.png'); }
+      background-image: url("../../images/modules/pages.png"); }
     #wrapper .module-image.redirect {
-      background-image: url('../images/modules/redirect.png'); }
+      background-image: url("../../images/modules/redirect.png"); }
     #wrapper .module-image.reviews {
-      background-image: url('../images/modules/reviews.png'); }
+      background-image: url("../../images/modules/reviews.png"); }
     #wrapper .module-image.sites {
-      background-image: url('../images/modules/sites.png'); }
+      background-image: url("../../images/modules/sites.png"); }
     #wrapper .module-image.slider {
-      background-image: url('../images/modules/slider.png'); }
+      background-image: url("../../images/modules/slider.png"); }
     #wrapper .module-image.user {
-      background-image: url('../images/modules/user.png'); }
+      background-image: url("../../images/modules/user.png"); }
     #wrapper .module-image.blog {
-      background-image: url('../images/modules/blog.png'); }
+      background-image: url("../../images/modules/blog.png"); }
     #wrapper .module-image.files {
-      background-image: url('../images/modules/files.png'); }
+      background-image: url("../../images/modules/files.png"); }
     #wrapper .module-image.translate {
-      background-image: url('../images/modules/translate.png'); }
+      background-image: url("../../images/modules/translate.png"); }
     #wrapper .module-image.catalog {
-      background-image: url('../images/modules/catalog.png'); }
+      background-image: url("../../images/modules/catalog.png"); }
     #wrapper .module-image.calc {
-      background-image: url('../images/modules/calc.png'); }
+      background-image: url("../../images/modules/calc.png"); }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #wrapper .module-image {
-      background-image: url('../images/modules/default@2x.png'); }
+      background-image: url("../../images/modules/default@2x.png"); }
       #wrapper .module-image.core {
-        background-image: url('../images/modules/core.png'); }
+        background-image: url("../../images/modules/core.png"); }
       #wrapper .module-image.faq {
-        background-image: url('../images/modules/faq.png'); }
+        background-image: url("../../images/modules/faq.png"); }
       #wrapper .module-image.mail {
-        background-image: url('../images/modules/mail.png'); }
+        background-image: url("../../images/modules/mail.png"); }
       #wrapper .module-image.meta {
-        background-image: url('../images/modules/meta.png'); }
+        background-image: url("../../images/modules/meta.png"); }
       #wrapper .module-image.menu {
-        background-image: url('../images/modules/menu.png'); }
+        background-image: url("../../images/modules/menu.png"); }
       #wrapper .module-image.offices {
-        background-image: url('../images/modules/offices.png'); }
+        background-image: url("../../images/modules/offices.png"); }
       #wrapper .module-image.partners {
-        background-image: url('../images/modules/partners.png'); }
+        background-image: url("../../images/modules/partners.png"); }
       #wrapper .module-image.photo {
-        background-image: url('../images/modules/photo.png'); }
+        background-image: url("../../images/modules/photo.png"); }
       #wrapper .module-image.pages {
-        background-image: url('../images/modules/pages.png'); }
+        background-image: url("../../images/modules/pages.png"); }
       #wrapper .module-image.redirect {
-        background-image: url('../images/modules/redirect.png'); }
+        background-image: url("../../images/modules/redirect.png"); }
       #wrapper .module-image.reviews {
-        background-image: url('../images/modules/reviews.png'); }
+        background-image: url("../../images/modules/reviews.png"); }
       #wrapper .module-image.sites {
-        background-image: url('../images/modules/sites.png'); }
+        background-image: url("../../images/modules/sites.png"); }
       #wrapper .module-image.slider {
-        background-image: url('../images/modules/slider.png'); }
+        background-image: url("../../images/modules/slider.png"); }
       #wrapper .module-image.user {
-        background-image: url('../images/modules/user.png'); }
+        background-image: url("../../images/modules/user.png"); }
       #wrapper .module-image.blog {
-        background-image: url('../images/modules/blog.png'); }
+        background-image: url("../../images/modules/blog.png"); }
       #wrapper .module-image.files {
-        background-image: url('../images/modules/files.png'); }
+        background-image: url("../../images/modules/files.png"); }
       #wrapper .module-image.translate {
-        background-image: url('../images/modules/translate.png'); }
+        background-image: url("../../images/modules/translate.png"); }
       #wrapper .module-image.catalog {
-        background-image: url('../images/modules/catalog.png'); }
+        background-image: url("../../images/modules/catalog.png"); }
       #wrapper .module-image.calc {
-        background-image: url('../images/modules/calc.png'); } }
+        background-image: url("../../images/modules/calc.png"); } }
   #wrapper #breadcrumbs {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -7197,7 +7197,7 @@ p {
   max-height: 100%; }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-  background-image: url('../images/fancybox/fancybox_sprite.png'); }
+  background-image: url("../../images/fancybox/fancybox_sprite.png"); }
 
 #fancybox-loading {
   position: fixed;
@@ -7213,7 +7213,7 @@ p {
 #fancybox-loading div {
   width: 44px;
   height: 44px;
-  background: url('../images/fancybox/fancybox_loading.gif') center center no-repeat; }
+  background: url("../../images/fancybox/fancybox_loading.gif") center center no-repeat; }
 
 .fancybox-close {
   position: absolute;
@@ -7231,7 +7231,7 @@ p {
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url('../images/fancybox/blank.gif');
+  background: transparent url("../../images/fancybox/blank.gif");
   /* helps IE */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 8040; }
@@ -7290,7 +7290,7 @@ p {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: url('../images/fancybox/fancybox_overlay.png'); }
+  background: url("../../images/fancybox/fancybox_overlay.png"); }
 
 .fancybox-overlay-fixed {
   position: fixed;
@@ -7356,11 +7356,11 @@ p {
 /*Retina graphics!*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-    background-image: url('../images/fancybox/fancybox_sprite@2x.png');
+    background-image: url("../../images/fancybox/fancybox_sprite@2x.png");
     background-size: 44px 152px;
     /*The size of the normal image, half the size of the hi-res image*/ }
   #fancybox-loading div {
-    background-image: url('../images/fancybox/fancybox_loading@2x.gif');
+    background-image: url("../../images/fancybox/fancybox_loading@2x.gif");
     background-size: 24px 24px;
     /*The size of the normal image, half the size of the hi-res image*/ } }
 

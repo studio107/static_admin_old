@@ -8,6 +8,7 @@ var concat = require('gulp-concat'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
     cache = require('gulp-cached'),
+    rewriteCSS = require('gulp-rewrite-css'),
     livereload = require('gulp-livereload');
 
 var version = '1.0.0';
@@ -38,7 +39,8 @@ var dst = {
     js: 'dist/js',
     css: 'dist/css',
     images: 'dist/images',
-    sass: './css'
+    sass: './css',
+    fonts: 'dist/fonts'
 };
 
 var paths = {
@@ -64,6 +66,7 @@ var paths = {
 
         'js/*.js'
     ],
+    fonts: 'fonts/**/*',
     images: 'images/**/*',
     sass: [
         'scss/**/*.scss',
@@ -77,13 +80,14 @@ var paths = {
         'vendor/select2/select2.css',
         'vendor/pen/src/pen.css',
         'vendor/pickmeup/css/pickmeup.css',
-        'fonts/style.css'
+        'fonts/lato/css/style.css',
+        'fonts/glyphico/css/style.css'
     ]
 };
 
 gulp.task('fonts', function() {
-    return gulp.src('fonts/fonts/*')
-        .pipe(gulp.dest('dist/fonts'));
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest(dst.fonts));
 });
 
 gulp.task('wysiwyg', function() {
@@ -93,7 +97,7 @@ gulp.task('wysiwyg', function() {
 
 gulp.task('js', function() {
     return gulp.src(paths.js)
-//        .pipe(uglify())
+        .pipe(uglify())
         .pipe(concat(version + '.all.js'))
         .pipe(gulp.dest(dst.js));
 });
@@ -113,6 +117,9 @@ gulp.task('sass', function() {
 
 gulp.task('css', ['sass'], function() {
     return gulp.src(paths.css)
+        .pipe(rewriteCSS({
+            destination: dst.css
+        }))
         .pipe(gulp.dest(dst.sass))
         .pipe(minifyCSS(minifyOpts))
         .pipe(concat(version + '.all.css'))
