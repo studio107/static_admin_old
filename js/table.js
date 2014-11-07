@@ -75,6 +75,6 @@ $(document).on('keyup', '.toolbar .search-toolbar input', function (e) {
             });
         }, 300);
     }
-    
+
     return false;
 });
