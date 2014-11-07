@@ -1,4 +1,4 @@
-$(document).on('click', 'table thead th.check.all [type="checkbox"]', function(e) {
+$(document).on('click', 'table thead th.check.all [type="checkbox"]', function (e) {
     var $this = $(this);
     $this.prop('checked', !$this.prop('checked')).closest('table').checkboxes('toggle');
 });
@@ -22,40 +22,43 @@ $(document).on('click', 'table thead th a', function (e) {
 //    return false;
 });
 
-$(document).on('click', '.toolbar .search, .toolbar .exit-search', function(e){
+$(document).on('click', '.toolbar .search, .toolbar .exit-search', function (e) {
     e.preventDefault();
     $('.toolbar').toggleClass('search');
     $('.page-size').toggleClass('search');
-    if ($('.toolbar').hasClass('search')){
+    if ($('.toolbar').hasClass('search')) {
         $('.toolbar .search-toolbar input').focus();
     }
     return false;
 });
 
-$(document).on('keydown', '.toolbar .search-toolbar input', function(e){
-    if (e.keyCode == 13){
+$(document).on('keydown', '.toolbar .search-toolbar input', function (e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
         return false;
     }
 });
 
-$(document).on('keyup', '.toolbar .search-toolbar input', function(e){
+$(document).on('keyup', '.toolbar .search-toolbar input', function (e) {
+    e.preventDefault();
+
     var searchVar = 'search',
         $this = $(this),
         updateTimer;
 
-    if (e.keyCode == 27){
+    if (e.keyCode == 27) {
         $('.toolbar').removeClass('search');
         $('.page-size').removeClass('search');
-    }else{
+    } else {
         clearTimeout(updateTimer);
-        updateTimer = setTimeout(function(){
+        updateTimer = setTimeout(function () {
             var $list = $('#list');
             var url = $list.data('path');
 
-            url = url.replace(new RegExp("(&|\\?)" + searchVar+"=.*?(&|$)",'g'), function(str, p1, p2, offset, s) {
-                if (p1 == '?'){
+            url = url.replace(new RegExp("(&|\\?)" + searchVar + "=.*?(&|$)", 'g'), function (str, p1, p2, offset, s) {
+                if (p1 == '?') {
                     return '?';
-                }else if (p2 == ''){
+                } else if (p2 == '') {
                     return '';
                 }
                 return '&';
@@ -66,10 +69,12 @@ $(document).on('keyup', '.toolbar .search-toolbar input', function(e){
             $.ajax({
                 url: url,
                 data: data,
-                success: function(html) {
+                success: function (html) {
                     $list.replaceWith($(html).find('#list'));
                 }
             });
         }, 300);
     }
+    
+    return false;
 });
