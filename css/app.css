@@ -7161,10 +7161,7 @@ p {
 .fancybox-skin {
   position: relative;
   background: #fff;
-  text-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px; }
+  text-shadow: none; }
 
 .fancybox-opened {
   z-index: 8030; }
