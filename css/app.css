@@ -6561,6 +6561,9 @@ fieldset {
   padding-left: 0;
   padding-right: 0; }
 
+#login .form-errors {
+  margin: 30px 0; }
+
 .form-errors {
   margin: 0;
   border: 0 none;

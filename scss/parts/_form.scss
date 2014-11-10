@@ -6,6 +6,12 @@ fieldset {
   padding-right: 0;
 }
 
+#login {
+  .form-errors {
+    margin: $defaultPadding 0;
+  }
+}
+
 .form-errors {
   @include reset-list;
   font-size: 14px;
