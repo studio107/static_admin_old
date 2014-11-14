@@ -39,6 +39,9 @@ table {
   tbody {
     tr {
       background-color: #fff !important;
+      &:hover {
+        background-color: #f4f4f4 !important;
+      }
       td {
         a {
           text-decoration: underline;
