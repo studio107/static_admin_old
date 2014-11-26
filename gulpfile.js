@@ -71,14 +71,12 @@ var paths = {
     css: [
         'css/**/*.css',
 
-        'components/mtooltip/mtooltip.css',
-
-        'vendor/select2/select2.css',
-        'vendor/pen/src/pen.css',
-        'vendor/pickmeup/css/pickmeup.css',
-
         'fonts/lato/css/style.css',
-        'fonts/glyphico/css/style.css'
+        'fonts/glyphico/css/style.css',
+
+        'components/mtooltip/mtooltip.css',
+        'vendor/pen/src/pen.css',
+        'vendor/pickmeup/css/pickmeup.css'
     ]
 };
 
@@ -115,11 +113,11 @@ gulp.task('sass', function() {
 gulp.task('css', ['sass', 'fonts'], function() {
     return gulp.src(paths.css)
         .pipe(rewriteCSS({
-            destination: 'dist/'
+            destination: 'dist/css/'
         }))
         .pipe(gulp.dest(dst.sass))
-        .pipe(minifyCSS(minifyOpts))
         .pipe(concat(version + '.all.css'))
+        .pipe(minifyCSS(minifyOpts))
         .pipe(gulp.dest(dst.css));
 });
 
@@ -133,8 +131,7 @@ gulp.task('watch', ['default'], function() {
         };
 
     gulp.watch(paths.js, ['js']).on('change', liveReloadCallback);
-    gulp.watch(paths.images, ['images']);
-    gulp.watch(paths.css, ['css']).on('change', liveReloadCallback);
+    gulp.watch(paths.images, ['images']).on('change', liveReloadCallback);
     gulp.watch(paths.sass, ['css']).on('change', liveReloadCallback);
 });
 

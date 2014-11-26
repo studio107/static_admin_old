@@ -1,8 +1,8 @@
-.sticky{
-  &.stuck{
+.sticky {
+  &.stuck {
     position: fixed;
 
-    &.toolbar{
+    &.toolbar {
       top: 0;
       left: $sidebarWidth;
       width: $mainWidth;
@@ -15,10 +15,10 @@
       border-style: solid;
       border-color: $borderColor;
 
-      @include box-shadow(0px 1px 3px 0 rgba(0,0,0,.2));
+      @include box-shadow(0px 1px 3px 0 rgba(0, 0, 0, .2));
     }
 
-    &.page-size{
+    &.page-size {
       top: 0;
       right: 0;
       margin-right: $lastColumnWidth;
@@ -27,29 +27,30 @@
   }
 }
 
-.toolbar-holder{
+.toolbar-holder {
   height: 62px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .toolbar {
-  .button, select{
+  .button, select {
     float: left;
   }
 }
 
-.toolbar{
+.toolbar {
   padding-top: 15px;
   padding-bottom: 15px;
 
-  select, input, .button{
+  select, input, .button {
     margin-bottom: 0;
   }
 }
 
-form.save-update{
-  .buttons-block{
+form.save-update {
+  .buttons-block {
+    z-index: 10001;
     position: fixed;
     bottom: 0;
     left: $sidebarWidth;
@@ -60,6 +61,6 @@ form.save-update{
     border-style: solid;
     border-color: $borderColor;
 
-    @include box-shadow(0px -1px 3px 0 rgba(0,0,0,.2));
+    @include box-shadow(0px -1px 3px 0 rgba(0, 0, 0, .2));
   }
 }
