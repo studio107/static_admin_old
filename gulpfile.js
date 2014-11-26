@@ -26,14 +26,10 @@ var imagesOpts = {
 var sassOpts = {
     includePaths: [
         'vendor/foundation/scss',
-        'vendor/mindy-sass/mindy'
+        'vendor/mindy-sass/mindy',
+        '/Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets'
     ]
 };
-if(process.env.USER == 'aleksandrgordeev') {
-    sassOpts.includePaths.push('/Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets');
-} else {
-    sassOpts.includePaths.push('/Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets');
-}
 
 var dst = {
     js: 'dist/js',
@@ -80,6 +76,7 @@ var paths = {
         'vendor/select2/select2.css',
         'vendor/pen/src/pen.css',
         'vendor/pickmeup/css/pickmeup.css',
+
         'fonts/lato/css/style.css',
         'fonts/glyphico/css/style.css'
     ]
@@ -115,10 +112,10 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(dst.sass));
 });
 
-gulp.task('css', ['sass'], function() {
+gulp.task('css', ['sass', 'fonts'], function() {
     return gulp.src(paths.css)
         .pipe(rewriteCSS({
-            destination: dst.css
+            destination: 'dist/'
         }))
         .pipe(gulp.dest(dst.sass))
         .pipe(minifyCSS(minifyOpts))
@@ -149,5 +146,5 @@ gulp.task('clean', function() {
 });
 
 gulp.task('default', ['clean'], function() {
-    return gulp.start('js', 'css', 'fonts', 'images', 'wysiwyg');
+    return gulp.start('js', 'css', 'images', 'wysiwyg');
 });
