@@ -112,7 +112,7 @@ form {
       }
     }
 
-    select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"] {
+    select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"], input[type="hidden"] {
       width: 50%;
     }
 
@@ -124,7 +124,7 @@ form {
         margin-bottom: 20px;
         border-bottom: 1px solid $clouds;
 
-        select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"] {
+        select, input[type="text"], input[type="password"], input[type="email"], input[type="phone"], input[type="hidden"] {
           width: 100%;
         }
 
