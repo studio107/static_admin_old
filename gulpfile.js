@@ -92,7 +92,7 @@ gulp.task('wysiwyg', function() {
 
 gulp.task('js', function() {
     return gulp.src(paths.js)
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat(version + '.all.js'))
         .pipe(gulp.dest(dst.js));
 });
