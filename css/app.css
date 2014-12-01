@@ -6890,14 +6890,10 @@ table {
       text-transform: uppercase;
       color: #616161; }
       table thead tr th.check.all {
-<<<<<<< HEAD
         padding: 0 9px;
         width: 32px; }
         table thead tr th.check.all .checkbox-state {
           margin: 0; }
-=======
-        width: 32px; }
->>>>>>> d7e9437d21b62cd2577d29f8255f01db0fb11a5d
       table thead tr th a {
         color: #616161; }
         table thead tr th a:hover {
