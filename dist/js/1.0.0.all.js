@@ -9094,9 +9094,9 @@ $(function () {
     $(document).foundation();
     $('textarea').autosize();
 
-    $(document).on('click', "[data-toggle]", function () {
-        $(this).next().toggle();
-    });
+    //$(document).on('click', "[data-toggle]", function () {
+    //    $(this).next().toggle();
+    //});
 
     $(document).on('click', '.mmodal', function (e) {
         e.preventDefault();
@@ -9763,7 +9763,9 @@ $(document).on('click', 'table thead th.check.all [type="checkbox"]', function (
     $this.prop('checked', !$this.prop('checked')).closest('table').checkboxes('toggle');
 });
 
-$('table').checkboxes('range', true);
+$(function() {
+    $('table').checkboxes('range', true);
+});
 
 $(document).on('click', 'table thead th a', function (e) {
 //    e.preventDefault();
@@ -9784,9 +9786,10 @@ $(document).on('click', 'table thead th a', function (e) {
 
 $(document).on('click', '.toolbar .search, .toolbar .exit-search', function (e) {
     e.preventDefault();
-    $('.toolbar').toggleClass('search');
+    var $toolbar = $('.toolbar');
+    $toolbar.toggleClass('search');
     $('.page-size').toggleClass('search');
-    if ($('.toolbar').hasClass('search')) {
+    if ($toolbar.hasClass('search')) {
         $('.toolbar .search-toolbar input').focus();
     }
     return false;

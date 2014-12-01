@@ -2,9 +2,9 @@ $(function () {
     $(document).foundation();
     $('textarea').autosize();
 
-    $(document).on('click', "[data-toggle]", function () {
-        $(this).next().toggle();
-    });
+    //$(document).on('click', "[data-toggle]", function () {
+    //    $(this).next().toggle();
+    //});
 
     $(document).on('click', '.mmodal', function (e) {
         e.preventDefault();
