@@ -8,7 +8,11 @@ table {
     tr {
       th {
         &.check.all {
+          padding: 0 9px;
           width: 32px;
+          .checkbox-state {
+            margin: 0;
+          }
         }
         font-size: 11px;
         text-transform: uppercase;
