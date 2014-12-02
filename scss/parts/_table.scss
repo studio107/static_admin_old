@@ -8,7 +8,7 @@ table {
     tr {
       th {
         &.check.all {
-          padding: 0 9px;
+          padding: 0 0 0 18px;
           width: 32px;
           .checkbox-state {
             margin: 0;
@@ -63,11 +63,15 @@ table {
         width: 40px;
       }
       td, th {
-        &.td-id, &.th-id, &.check {
+        &.td-id, &.th-id {
           width: 40px;
         }
         &.check {
-          padding-left: $column-gutter / 2;
+          padding: 0 0 0 18px;
+          width: 32px;
+          .checkbox-state {
+            margin: 0;
+          }
 
           input {
             display: none;
@@ -143,7 +147,10 @@ table {
       display: block;
     }
     &:hover {
-      background-color: #F9F6E3;
+      a {
+        text-decoration: underline;
+      }
+      // background-color: #F9F6E3;
     }
   }
 }

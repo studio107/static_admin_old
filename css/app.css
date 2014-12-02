@@ -6890,7 +6890,7 @@ table {
       text-transform: uppercase;
       color: #616161; }
       table thead tr th.check.all {
-        padding: 0 9px;
+        padding: 0 0 0 18px;
         width: 32px; }
         table thead tr th.check.all .checkbox-state {
           margin: 0; }
@@ -6914,10 +6914,13 @@ table {
     cursor: move; }
   table tbody tr th.sorting, table thead tr th.sorting {
     width: 40px; }
-  table tbody tr td.td-id, table tbody tr td.th-id, table tbody tr td.check, table tbody tr th.td-id, table tbody tr th.th-id, table tbody tr th.check, table thead tr td.td-id, table thead tr td.th-id, table thead tr td.check, table thead tr th.td-id, table thead tr th.th-id, table thead tr th.check {
+  table tbody tr td.td-id, table tbody tr td.th-id, table tbody tr th.td-id, table tbody tr th.th-id, table thead tr td.td-id, table thead tr td.th-id, table thead tr th.td-id, table thead tr th.th-id {
     width: 40px; }
   table tbody tr td.check, table tbody tr th.check, table thead tr td.check, table thead tr th.check {
-    padding-left: 0.9375rem; }
+    padding: 0 0 0 18px;
+    width: 32px; }
+    table tbody tr td.check .checkbox-state, table tbody tr th.check .checkbox-state, table thead tr td.check .checkbox-state, table thead tr th.check .checkbox-state {
+      margin: 0; }
     table tbody tr td.check input, table tbody tr th.check input, table thead tr td.check input, table thead tr th.check input {
       display: none; }
     table tbody tr td.check label, table tbody tr th.check label, table thead tr td.check label, table thead tr th.check label {
@@ -6955,8 +6958,8 @@ table {
     background-color: #F9F6E3; }
   table thead tr th a {
     display: block; }
-  table thead tr th:hover {
-    background-color: #F9F6E3; }
+  table thead tr th:hover a {
+    text-decoration: underline; }
 
 input, select {
   outline: none; }
