@@ -6557,19 +6557,19 @@ form.save-update {
         display: block; }
       form.save-update .inline-form .form-inline-section .form-block {
         margin: 0; }
-      form.save-update .inline-form .form-inline-section table {
+      form.save-update .inline-form .form-inline-section > table {
         margin: 0; }
-        form.save-update .inline-form .form-inline-section table tr:hover {
+        form.save-update .inline-form .form-inline-section > table > tr:hover {
           background-color: transparent; }
-        form.save-update .inline-form .form-inline-section table tr td {
+        form.save-update .inline-form .form-inline-section > table > tr > td {
           vertical-align: top;
           padding: 0 6px; }
-          form.save-update .inline-form .form-inline-section table tr td p {
+          form.save-update .inline-form .form-inline-section > table > tr > td p {
             font-size: 14px;
             line-height: 1.2; }
-          form.save-update .inline-form .form-inline-section table tr td:first-child {
+          form.save-update .inline-form .form-inline-section > table > tr > td:first-child {
             padding-left: 0; }
-          form.save-update .inline-form .form-inline-section table tr td:last-child {
+          form.save-update .inline-form .form-inline-section > table > tr > td:last-child {
             padding-right: 0; }
     form.save-update .inline-form .inline-add {
       margin-top: 10px !important;
@@ -6579,6 +6579,12 @@ form.save-update {
       text-align: center;
       color: #353535;
       background-color: #f4f4f4; }
+  form.save-update .inline-source {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: none; }
 form .form-block {
   margin-bottom: 15px; }
 form label {

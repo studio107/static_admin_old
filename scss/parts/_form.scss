@@ -137,16 +137,16 @@ form {
           margin: 0;
         }
 
-        table {
+        & > table {
           margin: 0;
 
-          tr {
+          & > tr {
 
             &:hover {
               background-color: transparent;
             }
 
-            td {
+            & > td {
               vertical-align: top;
               padding: 0 6px;
 
@@ -177,6 +177,14 @@ form {
         color: #353535;
         background-color: #f4f4f4;
       }
+    }
+
+    .inline-source {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      display: none;
     }
   }
 
