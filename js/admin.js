@@ -45,6 +45,19 @@ $(function () {
         $(this).parent().fadeOut();
         return false;
     });
+
+    function popupWindow(url, title, w, h) {
+        var left = (screen.width / 2) - (w / 2),
+            top = (screen.height / 2) - (h / 2);
+        return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    }
+
+    $(document).on('click', '.window-open', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        popupWindow($this.attr('href'), $this.attr('title'), ($this.data('width') || 650), ($this.data('height') || 650)).print();
+        return false;
+    });
 });
 
 $(document).on('click', '[data-confirm]', function (e) {
