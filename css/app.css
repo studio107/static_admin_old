@@ -6152,7 +6152,7 @@ fieldset legend {
     #wrapper #main:after {
       clear: both; }
     #wrapper #main #hide-sidebar {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 233px;
       width: 18px;

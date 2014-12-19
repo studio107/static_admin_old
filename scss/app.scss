@@ -118,7 +118,7 @@ fieldset {
     padding: 0;
 
     #hide-sidebar {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: $sidebarWidth - 17px;
       width: 18px;
