@@ -59,7 +59,14 @@ var paths = {
 
         'vendor/ace/build/src/ace.js',
         'vendor/ace/build/src/mode-twig.js',
+        'vendor/ace/build/src/theme-crimson_editor.js',
+        'vendor/ace/build/src/ext-emmet.js',
+        'vendor/ace/build/src/ext-language_tools.js',
+        'vendor/ace/build/src/snippets/text.js',
+        'vendor/ace/build/src/snippets/twig.js',
 
+        // https://github.com/nightwing/emmet-core
+        'components/emmet.js',
         'components/mtooltip/mtooltip.js',
         'components/jquery.dragsort-0.5.2.min.js',
 
