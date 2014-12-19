@@ -5956,14 +5956,14 @@ fieldset legend {
           #wrapper #sidebar #sidebar-menu li ul li.active, #wrapper #sidebar #sidebar-menu li ul li:hover {
             border-left: 4px solid #2575b0; }
             #wrapper #sidebar #sidebar-menu li ul li.active a, #wrapper #sidebar #sidebar-menu li ul li:hover a {
-              padding-left: 34px;
+              padding-left: 50px;
               color: #2575b0; }
               #wrapper #sidebar #sidebar-menu li ul li.active a i, #wrapper #sidebar #sidebar-menu li ul li:hover a i {
                 color: #2575b0; }
           #wrapper #sidebar #sidebar-menu li ul li a {
             font-size: 13px;
             display: block;
-            padding-left: 38px;
+            padding-left: 54px;
             font-weight: normal; }
             #wrapper #sidebar #sidebar-menu li ul li a i {
               width: 25px;

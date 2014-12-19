@@ -71,7 +71,7 @@
             border-left: 4px solid $blue;
 
             a {
-              padding-left: $defaultPadding - $borderLeftSize + 8px;
+              padding-left: 54px - $borderLeftSize;
               color: $blue;
 
               i {
@@ -83,7 +83,7 @@
           a {
             font-size: 13px;
             display: block;
-            padding-left: $defaultPadding + 8px;
+            padding-left: 54px;
             font-weight: normal;
 
             i {
