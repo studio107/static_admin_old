@@ -1,7 +1,8 @@
 #sidebar {
   @include box-sizing(border-box);
-  padding: 0;
   width: $sidebarWidth;
+  vertical-align: top;
+  padding: 0;
   background-color: $grey;
 
   #sidebar-menu {
@@ -21,7 +22,7 @@
         background-color: $borderColor;
       }
 
-      &>span {
+      & > span {
         font-size: 15px;
         text-transform: capitalize;
         color: $darkGrey;
@@ -44,7 +45,7 @@
           height: $moduleNameHeight;
           display: inline-block;
           float: left;
-          margin-right: 4px;
+          margin-right: 7px;
         }
       }
 
@@ -70,7 +71,7 @@
             border-left: 4px solid $blue;
 
             a {
-              padding-left: $defaultPadding - $borderLeftSize;
+              padding-left: $defaultPadding - $borderLeftSize + 8px;
               color: $blue;
 
               i {
@@ -82,7 +83,7 @@
           a {
             font-size: 13px;
             display: block;
-            padding-left: $defaultPadding;
+            padding-left: $defaultPadding + 8px;
             font-weight: normal;
 
             i {

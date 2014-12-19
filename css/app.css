@@ -5826,7 +5826,7 @@ fieldset legend {
   padding: 0 30px;
   height: 34px;
   line-height: 34px;
-  margin: 30px 0 45px; }
+  margin: 25px 0; }
   #header:before, #header:after {
     display: table;
     content: "";
@@ -5860,6 +5860,26 @@ fieldset legend {
       float: left;
       margin-left: 15px; }
 
+@media only screen and (min-width:64.063em) {
+  #wrapper #sidebar {
+    position: static;
+    display: table-cell;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+    #wrapper #sidebar::after {
+      display: none; }
+    #wrapper #sidebar .nano > .nano-content {
+      position: static;
+      left: inherit;
+      bottom: inherit;
+      top: inherit; }
+  #main #content {
+    border: 0; } }
+
+@media only screen and (min-width:90.063em) {
+  #base {
+    min-width: 1288px; } }
+
 #wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5867,15 +5887,17 @@ fieldset legend {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  min-width: 978px; }
   #wrapper #sidebar {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0;
     width: 250px;
+    vertical-align: top;
+    padding: 0;
     background-color: #f9f9f9; }
     #wrapper #sidebar #sidebar-menu {
       margin: 0;
@@ -5909,7 +5931,7 @@ fieldset legend {
           height: 24px;
           display: inline-block;
           float: left;
-          margin-right: 4px; }
+          margin-right: 7px; }
       #wrapper #sidebar #sidebar-menu li ul {
         margin: 0;
         border: 0 none;
@@ -5934,14 +5956,14 @@ fieldset legend {
           #wrapper #sidebar #sidebar-menu li ul li.active, #wrapper #sidebar #sidebar-menu li ul li:hover {
             border-left: 4px solid #2575b0; }
             #wrapper #sidebar #sidebar-menu li ul li.active a, #wrapper #sidebar #sidebar-menu li ul li:hover a {
-              padding-left: 26px;
+              padding-left: 34px;
               color: #2575b0; }
               #wrapper #sidebar #sidebar-menu li ul li.active a i, #wrapper #sidebar #sidebar-menu li ul li:hover a i {
                 color: #2575b0; }
           #wrapper #sidebar #sidebar-menu li ul li a {
             font-size: 13px;
             display: block;
-            padding-left: 30px;
+            padding-left: 38px;
             font-weight: normal; }
             #wrapper #sidebar #sidebar-menu li ul li a i {
               width: 25px;
@@ -6128,6 +6150,21 @@ fieldset legend {
       line-height: 0; }
     #wrapper #main:after {
       clear: both; }
+    #wrapper #main #hide-sidebar {
+      position: absolute;
+      top: 50%;
+      left: 233px;
+      width: 18px;
+      height: 43px;
+      margin-top: -21px;
+      background: transparent url("../../images/sidebar-hide.png") 50% 50% no-repeat;
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      display: block; }
+      #wrapper #main #hide-sidebar.show {
+        background-image: url("../../images/sidebar-show.png");
+        left: 0; }
     #wrapper #main #content {
       border-width: 0 1px;
       border-style: solid;
@@ -6156,13 +6193,9 @@ fieldset legend {
 #base {
   display: table;
   min-height: 100%;
-  height: 100%;
-  min-width: 1288px; }
+  height: 100%; }
   #base #base-line {
     display: table-row; }
-    #base #base-line #sidebar {
-      display: table-cell;
-      vertical-align: top; }
     #base #base-line #main {
       width: 1038px;
       display: table-cell;
@@ -7018,20 +7051,6 @@ p {
       .version-container .information-list li .version-error {
         color: #C0392B; }
 
-::-webkit-scrollbar {
-  width: 8px; }
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.2); }
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(0, 0, 0, 0.1); }
-
 #login #base {
   min-width: inherit;
   display: block; }
@@ -7286,9 +7305,14 @@ p {
   list-style: none;
   margin-top: 20px;
   padding-left: 14px; }
+  .user-action-list.admin {
+    padding: 0;
+    margin: 0; }
+    .user-action-list.admin li {
+      padding: 4px 0;
+      margin-bottom: 6px; }
   .user-action-list li {
     padding: 8px 0 10px 30px;
-    border-left: 1px solid #ccc;
     position: relative; }
     .user-action-list li.last {
       border-left: none; }
@@ -7335,7 +7359,8 @@ p {
   outline: 0 none;
   padding: 0;
   list-style: none;
-  padding-top: 10px; }
+  padding-top: 10px;
+  margin: 10px 0; }
   .flash-list li {
     font-size: 18px;
     font-weight: 200;
@@ -7343,8 +7368,10 @@ p {
     border-style: solid;
     border-color: #e0e0e0;
     border-width: 1px 0;
-    padding: 10px 30px;
-    margin-bottom: 10px; }
+    padding: 15px 30px 15px 78px;
+    margin-bottom: 10px;
+    background-position: 30px 50%;
+    background-repeat: no-repeat; }
     .flash-list li .close {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer;
@@ -7354,11 +7381,23 @@ p {
       -moz-opacity: 0.5;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
       filter: "alpha(opacity=50)"; }
-    .flash-list li.success, .flash-list li.info {
+    .flash-list li.success {
+      background-image: url("../../images/icons/icon-success.png");
       color: #948461;
       border-color: #EBE2B6;
       background-color: #F9F6E3; }
-    .flash-list li.error, .flash-list li.warning {
+    .flash-list li.info {
+      background-image: url("../../images/icons/icon-info.png");
+      color: #948461;
+      border-color: #EBE2B6;
+      background-color: #F9F6E3; }
+    .flash-list li.error {
+      background-image: url("../../images/icons/icon-error.png");
+      color: #ca8989;
+      border-color: #e2b7b7;
+      background-color: #fdeaea; }
+    .flash-list li.warning {
+      background-image: url("../../images/icons/icon-warning.png");
       color: #c48383;
       border-color: #f1d0d0;
       background-color: #ffebeb; }

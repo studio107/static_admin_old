@@ -1,6 +1,7 @@
 .flash-list {
   @include reset-list;
   padding-top: $defaultPadding - 20px;
+  margin: 10px 0;
 
   li {
     font-size: 18px;
@@ -9,8 +10,11 @@
     border-style: solid;
     border-color: darken($grey, 10%);
     border-width: 1px 0;
-    padding: 10px $defaultPadding;
+    padding: 15px $defaultPadding 15px $defaultPadding + 33px + 15px;
     margin-bottom: 10px;
+
+    background-position: $defaultPadding 50%;
+    background-repeat: no-repeat;
 
     .close {
       font-family: $helvetica;
@@ -20,13 +24,29 @@
       @include mopacity(0.5);
     }
 
-    &.success, &.info {
+    &.success {
+      background-image: url(../images/icons/icon-success.png);
       color: #948461;
       border-color: #EBE2B6;
       background-color: #F9F6E3;
     }
 
-    &.error, &.warning {
+    &.info {
+      background-image: url(../images/icons/icon-info.png);
+      color: #948461;
+      border-color: #EBE2B6;
+      background-color: #F9F6E3;
+    }
+
+    &.error {
+      background-image: url(../images/icons/icon-error.png);
+      color: #ca8989;
+      border-color: #e2b7b7;
+      background-color: #fdeaea;
+    }
+
+    &.warning {
+      background-image: url(../images/icons/icon-warning.png);
       color: #c48383;
       border-color: #f1d0d0;
       background-color: #ffebeb;

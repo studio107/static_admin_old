@@ -37,7 +37,7 @@ fieldset {
   padding: 0 $defaultPadding;
   height: $logoSize;
   line-height: $logoSize;
-  margin: 30px 0 45px;
+  margin: 25px 0;
 
   #logo {
     width: $logoSize;
@@ -62,6 +62,7 @@ fieldset {
 
   .user-panel {
     @include reset-list;
+
     li {
       @include float-left;
       margin-left: 15px;
@@ -69,10 +70,45 @@ fieldset {
   }
 }
 
+@media #{unquote($large-up)} {
+  #wrapper {
+    #sidebar {
+      position: static;
+      display: table-cell;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+      &::after {
+        display: none;
+      }
+
+      .nano > .nano-content {
+        position: static;
+        left: inherit;
+        bottom: inherit;
+        top: inherit;
+      }
+    }
+  }
+
+  #main {
+    #content {
+      border: 0;
+    }
+  }
+}
+
+@media #{unquote($xlarge-up)} {
+  #base {
+    min-width: $mainWidth + $sidebarWidth;
+  }
+}
+
 #wrapper {
   @include box-sizing(border-box);
   height: 100%;
   width: 100%;
+  min-width: 978px;
 
   @import "parts/sidebar";
   @import "parts/breadcrumbs";
@@ -80,6 +116,23 @@ fieldset {
   #main {
     @include clearfix;
     padding: 0;
+
+    #hide-sidebar {
+      position: absolute;
+      top: 50%;
+      left: $sidebarWidth - 17px;
+      width: 18px;
+      height: 43px;
+      margin-top: -21px;
+      background: transparent url(../images/sidebar-hide.png) 50% 50% no-repeat;
+      @include hide-text;
+      display: block;
+
+      &.show {
+        background-image: url(../images/sidebar-show.png);
+        left: 0;
+      }
+    }
 
     #content {
       border-width: 0 1px;
@@ -129,15 +182,9 @@ fieldset {
   display: table;
   min-height: 100%;
   height: 100%;
-  min-width: $mainWidth+$sidebarWidth;
 
   #base-line {
     display: table-row;
-
-    #sidebar {
-      display: table-cell;
-      vertical-align: top;
-    }
 
     #main {
       width: $mainWidth;
@@ -160,8 +207,8 @@ fieldset {
 
 @media only screen and (min-width: $mainWidth+$lastColumnWidth+$sidebarWidth+10px) {
   #base {
-    #base-line{
-      #last-column{
+    #base-line {
+      #last-column {
         display: table-cell;
       }
     }

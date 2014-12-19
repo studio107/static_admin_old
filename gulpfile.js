@@ -84,9 +84,10 @@ var paths = {
         'fonts/lato/css/style.css',
         'fonts/glyphico/css/style.css',
 
-        'components/mtooltip/mtooltip.css',
         'vendor/pen/src/pen.css',
-        'vendor/pickmeup/css/pickmeup.css'
+        'vendor/pickmeup/css/pickmeup.css',
+
+        'components/mtooltip/mtooltip.css'
     ]
 };
 
