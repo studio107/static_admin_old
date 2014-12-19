@@ -57,6 +57,9 @@ var paths = {
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
 
+        'vendor/ace/build/src/ace.js',
+        'vendor/ace/build/src/mode-twig.js',
+
         'components/mtooltip/mtooltip.js',
         'components/jquery.dragsort-0.5.2.min.js',
 

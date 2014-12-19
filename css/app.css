@@ -6353,6 +6353,10 @@ fieldset legend {
   .image-field-list li.empty {
     border: 2px dashed #ccc; }
 
+.ace-editor {
+  min-height: 350px;
+  border: 1px solid #ccc; }
+
 .model-info {
   margin-left: -15px;
   margin-right: -15px;
