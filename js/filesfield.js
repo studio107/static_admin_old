@@ -2,11 +2,7 @@
 
     "use strict";
 
-    var filesField = function () {
-        return filesField.init.apply(this, arguments);
-    };
-
-    $.extend(filesField, {
+    var filesField = {
         options: {
             listId: undefined,
 
@@ -85,6 +81,8 @@
                 'dataType': 'html',
                 'success': function (data) {
                     var wrapped_data = $('<div/>').append(data);
+                    console.log(wrapped_data);
+                    console.log(me.options.listId);
                     $('#' + me.options.listId).replaceWith(wrapped_data.find('#' + me.options.listId));
                     me.initList();
                 }
@@ -134,13 +132,13 @@
                 }
             });
         }
-    });
+    };
 
     /**
      * Инициализация функции объекта для jQuery
      */
     return $.fn.filesField = function (options) {
-        return filesField.init(this, options);
+        return $.extend(true, {}, filesField).init(this, options);
     };
 
 })($);
