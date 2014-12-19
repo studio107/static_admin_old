@@ -5896,6 +5896,7 @@ fieldset legend {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     width: 250px;
+    min-width: 250px;
     vertical-align: top;
     padding: 0;
     background-color: #f9f9f9; }
