@@ -1,7 +1,6 @@
 .pager-container, .pager-holder{
-  height: 30px;
   line-height: 30px;
-  padding-top: 20px;
+  padding: 20px 0;
 
   .pager {
     @include reset-list;
