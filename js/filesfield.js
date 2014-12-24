@@ -44,6 +44,7 @@
 
             var flow = new Flow({
                 target: me.options.uploadUrl,
+                testChunks: false,
                 query: me.options.flowData
             });
 
@@ -81,8 +82,6 @@
                 'dataType': 'html',
                 'success': function (data) {
                     var wrapped_data = $('<div/>').append(data);
-                    console.log(wrapped_data);
-                    console.log(me.options.listId);
                     $('#' + me.options.listId).replaceWith(wrapped_data.find('#' + me.options.listId));
                     me.initList();
                 }
