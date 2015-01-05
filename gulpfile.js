@@ -56,6 +56,7 @@ var paths = {
         'vendor/mmodal/js/jquery.mindy.modal.js',
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
+        'vendor/remarkable/dist/remarkable.js',
 
         'vendor/ace/build/src/ace.js',
         'vendor/ace/build/src/mode-twig.js',

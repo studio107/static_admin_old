@@ -53,7 +53,8 @@ form.save-update {
   .buttons-block {
     padding: $column-gutter/2;
     .button {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
+      margin-right: 10px !important;
       @include border-radius(3px);
     }
   }
@@ -288,5 +289,39 @@ textarea {
   font-family: arial;
   &:hover {
     color: #a00;
+  }
+}
+
+.tabs {
+  outline: none;
+  &, dd, dt {
+    &, a {
+      outline: none;
+    }
+  }
+
+  dd {
+    margin-right: 10px;
+    border: 1px solid transparent;
+
+    a {
+      background-color: transparent;
+      padding: 5px 20px;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+
+    &.active {
+      border-color: #ccc;
+    }
+  }
+}
+
+.tabs-content {
+  &, .content {
+    outline: none;
   }
 }

@@ -6534,7 +6534,8 @@ fieldset {
 form.save-update .buttons-block {
   padding: 0.9375rem; }
   form.save-update .buttons-block .button {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    margin-right: 10px !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -6690,6 +6691,25 @@ textarea {
   font-family: arial; }
   .form-inline-delete:hover {
     color: #a00; }
+
+.tabs {
+  outline: none; }
+  .tabs, .tabs a, .tabs dd, .tabs dd a, .tabs dt, .tabs dt a {
+    outline: none; }
+  .tabs dd {
+    margin-right: 10px;
+    border: 1px solid transparent; }
+    .tabs dd a {
+      background-color: transparent;
+      padding: 5px 20px;
+      font-size: 14px; }
+      .tabs dd a:hover {
+        background-color: #f4f4f4; }
+    .tabs dd.active {
+      border-color: #ccc; }
+
+.tabs-content, .tabs-content .content {
+  outline: none; }
 
 .pager-container, .pager-holder {
   line-height: 30px;
