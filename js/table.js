@@ -24,6 +24,14 @@ $(document).on('click', 'table thead th a', function (e) {
 //    return false;
 });
 
+$(function() {
+    $(document).on('click', function(e) {
+        if ($(e.target).closest('.search').length == 0) {
+            $('.toolbar').removeClass('search');
+        }
+    });
+});
+
 $(document).on('click', '.toolbar .search, .toolbar .exit-search', function (e) {
     e.preventDefault();
     var $toolbar = $('.toolbar');

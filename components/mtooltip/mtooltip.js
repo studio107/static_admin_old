@@ -1,23 +1,3 @@
-/**
- * STUDIO107 CONFIDENTIAL
-
- *  [2009] - [2013] Studio107
- *  All Rights Reserved.
- *
- * NOTICE: All information contained herein is, and remains
- * the property of Studio107 and its suppliers,
- * if any.  The intellectual and technical concepts contained
- * herein are proprietary to Studio107
- * and its suppliers and may be covered by U.S. and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from Studio107.
- *
- * @author Falaleev Maxim
- * @email max@studio107.ru
- */
-
 (function($) {
     var Tooltip = function (selector, options) {
         this.init(selector, options);
