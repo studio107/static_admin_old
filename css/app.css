@@ -6367,7 +6367,8 @@ fieldset legend {
   position: relative; }
   .image-field-list li img {
     vertical-align: middle;
-    display: inline-block; }
+    display: inline-block;
+    width: 100%; }
   .image-field-list li .remove {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
