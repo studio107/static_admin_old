@@ -7944,7 +7944,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
  * @package		PickMeUp - jQuery datepicker plugin
  * @author		Nazar Mokrynskyi <nazar@mokrynskyi.com>
  * @author		Stefan Petre <www.eyecon.ro>
- * @copyright	Copyright (c) 2013-2015, Nazar Mokrynskyi
+ * @copyright	Copyright (c) 2013-2014, Nazar Mokrynskyi
  * @copyright	Copyright (c) 2008-2009, Stefan Petre
  * @license		MIT License, see license.txt
  */
@@ -8053,8 +8053,6 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 			current_cal		= Math.floor(options.calendars / 2),
 			actual_date		= options.date,
 			current_date	= options.current,
-			min_date		= options.min ? new Date(options.min) : null,
-			max_date		= options.max ? new Date(options.max) : null,
 			local_date,
 			header,
 			html,
@@ -8063,16 +8061,6 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 			shown_date_from,
 			shown_date_to,
 			tmp_date;
-		if (min_date) {
-			min_date.setDate(1);
-			min_date.addMonths(1);
-			min_date.addDays(-1);
-		}
-		if (max_date) {
-			max_date.setDate(1);
-			max_date.addMonths(1);
-			max_date.addDays(-1);
-		}
 		/**
 		 * Remove old content except header navigation
 		 */
@@ -8094,7 +8082,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 				header = formatDate(local_date, 'B, Y', options.locale);
 			}
 			if (!shown_date_to) {
-				if (max_date) {
+				if (options.max) {
 					// If all dates in this month (months in year or years in years block) are after max option - set next month as current
 					// in order not to show calendar with all disabled dates
 					tmp_date	= new Date(local_date);
@@ -8105,7 +8093,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 					} else {
 						tmp_date.addYears((options.calendars - 1) * 12);
 					}
-					if (tmp_date > max_date) {
+					if (tmp_date > options.max) {
 						--i;
 						current_date.addMonths(-1);
 						shown_date_to	= undefined;
@@ -8120,7 +8108,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 				shown_date_from.setDate(1);
 				shown_date_from.addMonths(1);
 				shown_date_from.addDays(-1);
-				if (min_date && min_date > shown_date_from) {
+				if (options.min && options.min > shown_date_from) {
 					--i;
 					current_date.addMonths(1);
 					shown_date_from	= undefined;
@@ -8281,7 +8269,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 					} else if (local_date.getDay() == 6) {
 						day.class_name.push('pmu-saturday');
 					}
-					var from_user	= options.render(new Date(local_date)) || {},
+					var from_user	= options.render(local_date) || {},
 						val			= local_date.valueOf(),
 						disabled	= (options.min && options.min > local_date) || (options.max && options.max < local_date);
 					if (from_user.disabled || disabled) {
@@ -8531,7 +8519,6 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 		}
 		options.change.apply(this, prepared_date);
 		if (
-			!options.flat &&
 			options.hide_on_select &&
 			(
 				options.mode != 'range' ||
@@ -8665,54 +8652,52 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 					});
 			}
 			options.before_show();
+			switch (options.position){
+				case 'top':
+					top -= pickmeup.outerHeight();
+					break;
+				case 'left':
+					left -= pickmeup.outerWidth();
+					break;
+				case 'right':
+					left += this.offsetWidth;
+					break;
+				case 'bottom':
+					top += this.offsetHeight;
+					break;
+			}
+			if (top + pickmeup.offsetHeight > viewport.t + viewport.h) {
+				top = pos.top  - pickmeup.offsetHeight;
+			}
+			if (top < viewport.t) {
+				top = pos.top + this.offsetHeight + pickmeup.offsetHeight;
+			}
+			if (left + pickmeup.offsetWidth > viewport.l + viewport.w) {
+				left = pos.left - pickmeup.offsetWidth;
+			}
+			if (left < viewport.l) {
+				left = pos.left + this.offsetWidth
+			}
 			if (options.show() == false) {
 				return;
 			}
-			if (!options.flat) {
-				switch (options.position){
-					case 'top':
-						top -= pickmeup.outerHeight();
-						break;
-					case 'left':
-						left -= pickmeup.outerWidth();
-						break;
-					case 'right':
-						left += this.offsetWidth;
-						break;
-					case 'bottom':
-						top += this.offsetHeight;
-						break;
-				}
-				if (top + pickmeup.offsetHeight > viewport.t + viewport.h) {
-					top = pos.top  - pickmeup.offsetHeight;
-				}
-				if (top < viewport.t) {
-					top = pos.top + this.offsetHeight + pickmeup.offsetHeight;
-				}
-				if (left + pickmeup.offsetWidth > viewport.l + viewport.w) {
-					left = pos.left - pickmeup.offsetWidth;
-				}
-				if (left < viewport.l) {
-					left = pos.left + this.offsetWidth
-				}
-				pickmeup.css({
-					display	: 'inline-block',
-					top		: top + 'px',
-					left	: left + 'px'
-				});
-				$(document)
-					.on(
-						'mousedown' + options.events_namespace,
-						options.binded.hide
-					)
-					.on(
-						'resize' + options.events_namespace,
-						[
-							true
-						],
-						options.binded.forced_show
-					);
-			}
+			pickmeup.css({
+				display	: 'inline-block',
+				top		: top + 'px',
+				left	: left + 'px'
+			});
+			$(document)
+				.on(
+					'mousedown' + options.events_namespace,
+					options.binded.hide
+				)
+				.on(
+					'resize' + options.events_namespace,
+					[
+						true
+					],
+					options.binded.forced_show
+				);
 		}
 	}
 	function forced_show () {
