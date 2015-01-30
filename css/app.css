@@ -6691,6 +6691,9 @@ textarea {
 [disabled] {
   cursor: not-allowed !important; }
 
+.sorting {
+  text-align: center; }
+
 .form-inline-delete {
   display: inline;
   float: right;

@@ -297,6 +297,10 @@ textarea {
   cursor: not-allowed !important;
 }
 
+.sorting {
+  text-align: center;
+}
+
 .form-inline-delete {
   @include float-right;
   color: #ccc;
