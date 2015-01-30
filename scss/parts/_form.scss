@@ -6,6 +6,18 @@ fieldset {
   padding-right: 0;
 }
 
+.meditor-block {
+  ol, ul {
+    li {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+[contenteditable] {
+  outline: none;
+}
+
 #login {
   .form-errors {
     margin: $defaultPadding 0;
@@ -87,6 +99,10 @@ form {
     .form-ul {
       padding: $defaultPadding;
       border-top: 1px solid #dddddd;
+
+      &, li {
+        outline: none;
+      }
     }
 
     .form-block {
@@ -292,22 +308,27 @@ textarea {
   }
 }
 
+#filter-form {
+  padding: 0 20px;
+  margin: 20px 0;
+}
+
 .tabs {
   outline: none;
-  &, dd, dt {
+  &, dd, dt, ul, .tab-title {
     &, a {
       outline: none;
     }
   }
 
-  dd {
+  dd, .tab-title {
     margin-right: 10px;
     border: 1px solid transparent;
 
     a {
       background-color: transparent;
       padding: 5px 20px;
-      font-size: 14px;
+      font-size: 1rem;
 
       &:hover {
         background-color: #f4f4f4;
@@ -323,5 +344,15 @@ textarea {
 .tabs-content {
   &, .content {
     outline: none;
+  }
+}
+
+.content-wrap {
+  table {
+    tr {
+      th, td {
+        padding: 8px 0;
+      }
+    }
   }
 }

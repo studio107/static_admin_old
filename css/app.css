@@ -6493,6 +6493,12 @@ fieldset {
   padding-left: 0;
   padding-right: 0; }
 
+.meditor-block ol li, .meditor-block ul li {
+  margin-bottom: 0 !important; }
+
+[contenteditable] {
+  outline: none; }
+
 #login .form-errors {
   margin: 30px 0; }
 
@@ -6560,6 +6566,8 @@ form.save-update {
   form.save-update .form-ul {
     padding: 30px;
     border-top: 1px solid #dddddd; }
+    form.save-update .form-ul, form.save-update .form-ul li {
+      outline: none; }
   form.save-update .form-block {
     padding: 0 30px; }
   form.save-update fieldset {
@@ -6693,24 +6701,31 @@ textarea {
   .form-inline-delete:hover {
     color: #a00; }
 
+#filter-form {
+  padding: 0 20px;
+  margin: 20px 0; }
+
 .tabs {
   outline: none; }
-  .tabs, .tabs a, .tabs dd, .tabs dd a, .tabs dt, .tabs dt a {
+  .tabs, .tabs a, .tabs dd, .tabs dd a, .tabs dt, .tabs dt a, .tabs ul, .tabs ul a, .tabs .tab-title, .tabs .tab-title a {
     outline: none; }
-  .tabs dd {
+  .tabs dd, .tabs .tab-title {
     margin-right: 10px;
     border: 1px solid transparent; }
-    .tabs dd a {
+    .tabs dd a, .tabs .tab-title a {
       background-color: transparent;
       padding: 5px 20px;
-      font-size: 14px; }
-      .tabs dd a:hover {
+      font-size: 1rem; }
+      .tabs dd a:hover, .tabs .tab-title a:hover {
         background-color: #f4f4f4; }
-    .tabs dd.active {
+    .tabs dd.active, .tabs .tab-title.active {
       border-color: #ccc; }
 
 .tabs-content, .tabs-content .content {
   outline: none; }
+
+.content-wrap table tr th, .content-wrap table tr td {
+  padding: 8px 0; }
 
 .pager-container, .pager-holder {
   line-height: 30px;

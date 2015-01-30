@@ -57,6 +57,21 @@ var paths = {
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
         'vendor/remarkable/dist/remarkable.js',
+        'vendor/jquery-form/jquery.form.js',
+
+        'vendor/underscore/underscore.js',
+        'vendor/ckeditor/ckeditor.js',
+        'vendor/meditor/js/utils.js',
+        'vendor/meditor/js/core.js',
+        'vendor/meditor/js/engine.js',
+        'vendor/meditor/js/editor.js',
+        'vendor/meditor/js/block.js',
+        'vendor/meditor/js/plugins/text/text.js',
+        'vendor/meditor/js/plugins/video.js',
+        'vendor/meditor/js/plugins/lost.js',
+        'vendor/meditor/js/plugins/space.js',
+        'vendor/meditor/js/plugins/image.js',
+        'vendor/meditor/js/plugins/map/map.js',
 
         'vendor/ace/build/src/ace.js',
         'vendor/ace/build/src/mode-twig.js',
@@ -85,6 +100,7 @@ var paths = {
         'fonts/lato/css/style.css',
         'fonts/glyphico/css/style.css',
 
+        'vendor/meditor/css/editor.css',
         'vendor/pen/src/pen.css',
         'vendor/pickmeup/css/pickmeup.css',
 

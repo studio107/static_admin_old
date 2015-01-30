@@ -1,6 +1,7 @@
 {
   "name": "foundation-libsass-template",
   "dependencies": {
+    "meditor": "~0.0.2",
     "foundation": "5.4.2",
     "mindy-sass": "*",
     "checkboxes.js": "~1.0.3",
@@ -16,6 +17,7 @@
     "tinymce107": ">=1.0.0",
     "sweetalert": "~0.2.0",
     "ace": "~1.1.8",
-    "remarkable": "~1.6.0"
+    "remarkable": "~1.6.0",
+    "jquery-form": "~3.46.0"
   }
 }
