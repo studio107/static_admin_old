@@ -1,7 +1,7 @@
 .tooltip {
   @include border-radius;
   @include antialias;
-  @include gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  // @include gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
   @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
   display: block;
   z-index: 10002;

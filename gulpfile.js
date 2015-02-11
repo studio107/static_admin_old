@@ -7,7 +7,7 @@ var concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
-    rewriteCSS = require('gulp-rewrite-css'),
+    // rewriteCSS = require('gulp-rewrite-css'),
     coffee = require('gulp-coffee'),
     livereload = require('gulp-livereload');
 
@@ -129,9 +129,9 @@ gulp.task('coffee', function() {
         .pipe(gulp.dest(dst.js))
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['coffee'], function() {
     return gulp.src(paths.js)
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(concat(version + '.all.js'))
         .pipe(gulp.dest(dst.js))
         .pipe(livereload());
@@ -153,9 +153,9 @@ gulp.task('sass', function() {
 
 gulp.task('css', ['sass', 'fonts'], function() {
     return gulp.src(paths.css)
-        .pipe(rewriteCSS({
-            destination: 'dist/css/'
-        }))
+        //.pipe(rewriteCSS({
+        //    destination: 'dist/css/'
+        //}))
         .pipe(gulp.dest(dst.sass))
         .pipe(concat(version + '.all.css'))
         .pipe(minifyCSS(minifyOpts))
@@ -163,7 +163,6 @@ gulp.task('css', ['sass', 'fonts'], function() {
         .pipe(livereload());
 });
 
-// Rerun the task when a file changes
 gulp.task('watch', ['default'], function() {
     livereload.listen();
     gulp.watch(paths.js, ['js']);
@@ -171,7 +170,6 @@ gulp.task('watch', ['default'], function() {
     gulp.watch(paths.sass, ['css']);
 });
 
-// Clean
 gulp.task('clean', function() {
     return gulp.src(['dist/*'], {
         read: false

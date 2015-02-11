@@ -21,7 +21,7 @@
       cursor: pointer;
       font-size: 26px;
       line-height: 26px;
-      @include mopacity(0.5);
+      @include opacity(0.5);
     }
 
     &.success {
