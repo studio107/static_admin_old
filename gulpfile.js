@@ -7,8 +7,8 @@ var concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
-    cache = require('gulp-cached'),
     rewriteCSS = require('gulp-rewrite-css'),
+    coffee = require('gulp-coffee'),
     livereload = require('gulp-livereload');
 
 var version = '1.0.0';
@@ -26,8 +26,7 @@ var imagesOpts = {
 var sassOpts = {
     includePaths: [
         'vendor/foundation/scss',
-        'vendor/mindy-sass/mindy',
-        '/Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets'
+        'vendor/mindy-sass/mindy'
     ]
 };
 
@@ -52,7 +51,7 @@ var paths = {
         'vendor/jquery-autosize/jquery.autosize.min.js',
         'vendor/jquery-ui/ui/minified/jquery-ui.min.js',
         'vendor/flow.js/dist/flow.js',
-//        'vendor/Chart.js/Chart.js',
+        //        'vendor/Chart.js/Chart.js',
         'vendor/mmodal/js/jquery.mindy.modal.js',
         'vendor/fancybox/source/jquery.fancybox.pack.js',
         'vendor/pickmeup/js/jquery.pickmeup.js',
@@ -88,11 +87,11 @@ var paths = {
 
         'js/*.js'
     ],
+    coffee: 'js/**/*.coffee',
     fonts: 'fonts/**/*',
     images: 'images/**/*',
     sass: [
-        'scss/**/*.scss',
-        'vendor/mmodal/scss/jquery.mmodal.scss'
+        'scss/**/*.scss'
     ],
     css: [
         'css/**/*.css',
@@ -110,26 +109,40 @@ var paths = {
 
 gulp.task('fonts', function() {
     return gulp.src(paths.fonts)
-        .pipe(gulp.dest(dst.fonts));
+        .pipe(gulp.dest(dst.fonts))
+        .pipe(livereload());
 });
 
 gulp.task('wysiwyg', function() {
     return gulp.src('vendor/tinymce107/**/*')
-        .pipe(gulp.dest('dist/wysiwyg'));
+        .pipe(gulp.dest('dist/wysiwyg'))
+        .pipe(livereload());
+});
+
+gulp.task('coffee', function() {
+    gulp.src(paths.coffee)
+        .pipe(coffee({
+            bare: true
+        }).on('error', function(err) {
+            console.log(err);
+        }))
+        .pipe(gulp.dest(dst.js))
 });
 
 gulp.task('js', function() {
     return gulp.src(paths.js)
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(concat(version + '.all.js'))
-        .pipe(gulp.dest(dst.js));
+        .pipe(gulp.dest(dst.js))
+        .pipe(livereload());
 });
 
 gulp.task('images', function() {
     return gulp.src(paths.images)
         .pipe(changed(dst.images))
-        .pipe(cache('imagemin', imagesOpts))
-        .pipe(gulp.dest(dst.images));
+        .pipe(imagemin(imagesOpts))
+        .pipe(gulp.dest(dst.images))
+        .pipe(livereload());
 });
 
 gulp.task('sass', function() {
@@ -146,21 +159,16 @@ gulp.task('css', ['sass', 'fonts'], function() {
         .pipe(gulp.dest(dst.sass))
         .pipe(concat(version + '.all.css'))
         .pipe(minifyCSS(minifyOpts))
-        .pipe(gulp.dest(dst.css));
+        .pipe(gulp.dest(dst.css))
+        .pipe(livereload());
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', ['default'], function() {
-    var server = livereload(),
-        liveReloadCallback = function(file) {
-            setTimeout(function() {
-                server.changed(file.path);
-            }, 300);
-        };
-
-    gulp.watch(paths.js, ['js']).on('change', liveReloadCallback);
-    gulp.watch(paths.images, ['images']).on('change', liveReloadCallback);
-    gulp.watch(paths.sass, ['css']).on('change', liveReloadCallback);
+    livereload.listen();
+    gulp.watch(paths.js, ['js']);
+    gulp.watch(paths.images, ['images']);
+    gulp.watch(paths.sass, ['css']);
 });
 
 // Clean

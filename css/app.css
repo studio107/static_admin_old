@@ -5882,8 +5882,8 @@ fieldset legend {
 
 #wrapper {
   -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
@@ -5891,8 +5891,8 @@ fieldset legend {
   min-width: 978px; }
   #wrapper #sidebar {
     -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
     width: 250px;
@@ -5948,8 +5948,8 @@ fieldset legend {
           line-height: 20px;
           margin: 0;
           -webkit-box-sizing: border-box;
+          -khtml-box-sizing: border-box;
           -moz-box-sizing: border-box;
-          -ms-box-sizing: border-box;
           -o-box-sizing: border-box;
           box-sizing: border-box; }
           #wrapper #sidebar #sidebar-menu li ul li, #wrapper #sidebar #sidebar-menu li ul li a {
@@ -6093,13 +6093,13 @@ fieldset legend {
         padding: 0;
         list-style: none;
         -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        -khtml-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        -ms-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         -o-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
         -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
         -o-border-radius: 3px;
         border-radius: 3px;
         position: absolute;
@@ -6224,7 +6224,7 @@ fieldset legend {
     position: relative; }
     .message-row .message-to .success-saved {
       -webkit-transition: all 0.5s;
-      -webkit-transition-delay: 0s;
+      -khtml-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s;
@@ -6325,14 +6325,14 @@ fieldset legend {
     margin: 0 -15px; }
   .file-manager .messages {
     -webkit-transition: all 0.4s;
-    -webkit-transition-delay: 0s;
+    -khtml-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s; }
     .file-manager .messages .notification {
       -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
       -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
       -o-border-radius: 5px;
       border-radius: 5px;
       margin-bottom: 7px;
@@ -6371,8 +6371,8 @@ fieldset legend {
     width: 100%; }
   .image-field-list li .remove {
     -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
     position: absolute;
@@ -6418,8 +6418,8 @@ fieldset legend {
     border-style: solid;
     border-color: #D8D8D8;
     -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
-    -ms-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
     -o-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2); }
   .sticky.stuck.page-size {
@@ -6453,15 +6453,15 @@ form.save-update .buttons-block {
   border-style: solid;
   border-color: #D8D8D8;
   -webkit-box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2);
+  -khtml-box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2);
-  -ms-box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0px -1px 3px 0 rgba(0, 0, 0, 0.2); }
 
 .button {
   -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
   outline: none;
@@ -6480,8 +6480,8 @@ form.save-update .buttons-block {
       background-color: #e2e2e2; }
   .button.transparent {
     -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px;
     background-color: transparent;
@@ -6544,8 +6544,8 @@ form.save-update .buttons-block {
     margin-bottom: 0 !important;
     margin-right: 10px !important;
     -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
 
@@ -6597,10 +6597,6 @@ form.save-update {
       form.save-update .inline-form .form-inline-section a.current-file {
         white-space: nowrap;
         overflow: hidden;
-        -webkit-text-overflow: ellipsis;
-        -moz-text-overflow: ellipsis;
-        -ms-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         display: block; }
       form.save-update .inline-form .form-inline-section .form-block {
@@ -6749,11 +6745,8 @@ textarea {
     .pager-container .pager:after, .pager-holder .pager:after {
       clear: both; }
     .pager-container .pager li, .pager-holder .pager li {
-      display: -moz-inline-stack;
       display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      zoom: 1;
+      *zoom: 1;
       *display: inline;
       margin: 0 2px; }
       .pager-container .pager li span, .pager-container .pager li a, .pager-holder .pager li span, .pager-holder .pager li a {
@@ -6762,8 +6755,8 @@ textarea {
         border: 1px solid transparent; }
         .pager-container .pager li span:hover, .pager-container .pager li span.selected, .pager-container .pager li a:hover, .pager-container .pager li a.selected, .pager-holder .pager li span:hover, .pager-holder .pager li span.selected, .pager-holder .pager li a:hover, .pager-holder .pager li a.selected {
           -webkit-border-radius: 3px;
+          -khtml-border-radius: 3px;
           -moz-border-radius: 3px;
-          -ms-border-radius: 3px;
           -o-border-radius: 3px;
           border-radius: 3px;
           border: 1px solid #e2e2e2; }
@@ -6800,8 +6793,8 @@ textarea {
     .toolbar .search-toolbar input {
       padding-left: 39px;
       -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px;
       -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px;
       background-color: #f9f9f9; }
@@ -6843,14 +6836,14 @@ textarea {
   .button.custom-button.sub-button-left {
     padding-left: 0; }
     .button.custom-button.sub-button-left .sub-button {
-      -webkit-transition: background-color 300ms;
-      -webkit-transition-delay: ease-out;
+      -webkit-transition: background-color 300ms ease-out;
+      -khtml-transition: background-color 300ms ease-out;
       -moz-transition: background-color 300ms ease-out;
       -o-transition: background-color 300ms ease-out;
       transition: background-color 300ms ease-out;
       -webkit-border-radius: 3px 0 0 3px;
+      -khtml-border-radius: 3px 0 0 3px;
       -moz-border-radius: 3px 0 0 3px;
-      -ms-border-radius: 3px 0 0 3px;
       -o-border-radius: 3px 0 0 3px;
       border-radius: 3px 0 0 3px;
       display: inline-block;
@@ -6864,8 +6857,8 @@ textarea {
 
 .toolbar select {
   -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
   background-color: #f5f5f5;
@@ -6881,16 +6874,16 @@ textarea {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
+    -khtml-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
     transform: translateY(-20px); }
 
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
+    -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
@@ -6898,16 +6891,16 @@ textarea {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
+    -khtml-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
     transform: translateY(-20px); }
 
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
+    -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
@@ -6915,16 +6908,16 @@ textarea {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
+    -khtml-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
     transform: translateY(-20px); }
 
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
+    -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
@@ -6932,16 +6925,16 @@ textarea {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
+    -khtml-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
     transform: translateY(-20px); }
 
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
+    -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
@@ -6949,16 +6942,16 @@ textarea {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
+    -khtml-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
     transform: translateY(-20px); }
 
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
+    -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
@@ -7100,13 +7093,13 @@ p {
   font-size: 48px; }
 #login .container {
   -webkit-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+  -khtml-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
   -moz-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  -ms-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
   -o-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
   box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
   -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
   -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
   padding: 25px;
@@ -7357,8 +7350,8 @@ p {
       border-left: none; }
     .user-action-list li .icon {
       -webkit-border-radius: 32px;
+      -khtml-border-radius: 32px;
       -moz-border-radius: 32px;
-      -ms-border-radius: 32px;
       -o-border-radius: 32px;
       border-radius: 32px;
       position: absolute;
@@ -7442,22 +7435,12 @@ p {
       background-color: #ffebeb; }
 
 .tooltip {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-image: -owg(linear-gradient(color-stops(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8))));
-  background-image: -webkit(linear-gradient(color-stops(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8))));
-  background-image: -moz(linear-gradient(color-stops(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8))));
-  background-image: -o(linear-gradient(color-stops(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8))));
-  background-image: linear-gradient(color-stops(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)));
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   display: block;
@@ -7510,8 +7493,8 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
 
 .select2-container, .select2-drop, .select2-search, .select2-search input {
   -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
