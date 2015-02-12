@@ -7682,31 +7682,33 @@ p {
       .version-container .information-list li .version-error {
         color: #C0392B; }
 
-#login #base {
-  min-width: inherit;
-  display: block; }
-#login #base-line {
-  display: block; }
-#login .header #logo {
-  text-align: center;
-  font-size: 48px; }
-#login .container {
-  -webkit-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  -khtml-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  -moz-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  -o-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
-  -webkit-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-  padding: 25px;
-  background-color: #fff; }
-  #login .container h1 {
-    font-size: 48px;
+#login {
+  width: 450px; }
+  #login #base {
+    min-width: inherit;
+    display: block; }
+  #login #base-line {
+    display: block; }
+  #login .header #logo {
     text-align: center;
-    font-weight: 700; }
+    font-size: 48px; }
+  #login .container {
+    -webkit-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+    -khtml-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+    -moz-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+    -o-box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+    box-shadow: 0 0 29px rgba(1, 1, 1, 0.08);
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fff; }
+    #login .container h1 {
+      font-size: 48px;
+      text-align: center;
+      font-weight: 700; }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap, .fancybox-skin, .fancybox-outer, .fancybox-inner, .fancybox-image, .fancybox-wrap iframe, .fancybox-wrap object, .fancybox-nav, .fancybox-nav span, .fancybox-tmp {

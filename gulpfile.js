@@ -109,8 +109,7 @@ var paths = {
 
 gulp.task('fonts', function() {
     return gulp.src(paths.fonts)
-        .pipe(gulp.dest(dst.fonts))
-        .pipe(livereload());
+        .pipe(gulp.dest(dst.fonts));
 });
 
 gulp.task('wysiwyg', function() {
@@ -141,8 +140,7 @@ gulp.task('images', function() {
     return gulp.src(paths.images)
         .pipe(changed(dst.images))
         .pipe(imagemin(imagesOpts))
-        .pipe(gulp.dest(dst.images))
-        .pipe(livereload());
+        .pipe(gulp.dest(dst.images));
 });
 
 gulp.task('sass', function() {

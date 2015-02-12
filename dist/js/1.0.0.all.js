@@ -39436,6 +39436,42 @@ $(document).on('click', 'table thead th.check.all [type="checkbox"]', function (
 
 $(function() {
     $('table').checkboxes('range', true);
+
+    $("#table-main.sortingColumn").find("tbody").sortable({
+        axis: 'y',
+        placeholder: "highlight",
+        helper: function (e, ui) {
+            ui.children().each(function () {
+                var $this = $(this);
+                $this.width($this.width());
+            });
+            return ui;
+        },
+        update: function (event, ui) {
+            var $to = $(ui.item),
+                $prev = $to.prev(),
+                $next = $to.next();
+
+            var data = $(this).sortable('toArray', {
+                attribute: 'data-pk'
+            });
+
+            $.ajax({
+                data: {
+                    models: data,
+                    pk: $to.data('pk'),
+                    insertAfter: $prev.data('pk'),
+                    insertBefore: $next.data('pk'),
+                    action: 'sorting'
+                },
+                type: 'POST',
+                url: '',
+                success: function (data) {
+                    $('#main-form').replaceWith(data);
+                }
+            });
+        }
+    }).disableSelection();
 });
 
 $(document).on('click', 'table thead th a', function (e) {
