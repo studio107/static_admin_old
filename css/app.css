@@ -6402,14 +6402,19 @@ body {
   background-color: #f9f9f9; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   color: #777; }
 
+h1, h2, h3 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
 h1 {
-  font-size: 26px; }
+  font-size: 20px; }
 
 h5 {
-  font-size: 20px; }
+  font-size: 18px; }
 
 .button {
   -webkit-font-smoothing: antialiased;
@@ -6685,10 +6690,10 @@ fieldset legend {
       float: left;
       margin-right: 12px;
       font-size: 14px;
-      color: #a7a7a7;
+      color: #777;
       position: relative; }
       #wrapper #breadcrumbs li a {
-        color: #a7a7a7;
+        color: #777;
         text-decoration: none; }
       #wrapper #breadcrumbs li .children {
         margin: 0;
