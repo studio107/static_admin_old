@@ -39429,11 +39429,6 @@ $(function(){
         });
     });
 });
-$(document).on('click', 'table thead th.check.all [type="checkbox"]', function (e) {
-    var $this = $(this);
-    $this.prop('checked', !$this.prop('checked')).closest('table').checkboxes('toggle');
-});
-
 $(function() {
     $('table').checkboxes('range', true);
 
@@ -39472,31 +39467,17 @@ $(function() {
             });
         }
     }).disableSelection();
-});
 
-$(document).on('click', 'table thead th a', function (e) {
-//    e.preventDefault();
-//
-//    var $this = $(this);
-//    $.ajax({
-//        url: '',
-//        data: {
-//            order: $this.data('column')
-//        },
-//        success: function(html) {
-//            $this.closest('table').find('tbody').html(html);
-//        }
-//    });
-//
-//    return false;
-});
-
-$(function() {
     $(document).on('click', function(e) {
         if ($(e.target).closest('.search').length == 0) {
             $('.toolbar').removeClass('search');
         }
     });
+});
+
+$(document).on('click', 'table thead th.check.all [type="checkbox"]', function (e) {
+    var $this = $(this);
+    $this.prop('checked', !$this.prop('checked')).closest('table').checkboxes('toggle');
 });
 
 $(document).on('click', '.toolbar .search, .toolbar .exit-search', function (e) {

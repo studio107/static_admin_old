@@ -204,6 +204,10 @@ fieldset {
 
       .last-columns-content {
         padding: $defaultPadding;
+
+        h5 {
+          @include antialias;
+        }
       }
     }
   }

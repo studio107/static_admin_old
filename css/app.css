@@ -6817,6 +6817,10 @@ fieldset legend {
       width: 300px; }
       #base #base-line #last-column .last-columns-content {
         padding: 30px; }
+        #base #base-line #last-column .last-columns-content h5 {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility; }
 
 @media only screen and (min-width: 1598px) {
   #base #base-line #last-column {
