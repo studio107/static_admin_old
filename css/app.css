@@ -6830,6 +6830,26 @@ fieldset legend {
 #footer {
   display: none; }
 
+.admin-header-link {
+  border: 1px solid #e0e0e0;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 0.9rem;
+  padding: 5px 15px;
+  color: #777;
+  margin-left: 15px; }
+  .admin-header-link i {
+    margin-right: 5px;
+    font-size: 0.7rem; }
+
 .message-row {
   margin-bottom: 5px; }
   .message-row input {

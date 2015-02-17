@@ -227,6 +227,21 @@ fieldset {
   display: none;
 }
 
+.admin-header-link {
+  border: 1px solid #e0e0e0;
+  @include border-radius(15px);
+  @include background-clip(padding-box);
+  font-size: 0.9rem;
+  padding: 5px 15px;
+  color: #777;
+  margin-left: 15px;
+
+  i {
+    margin-right: 5px;
+    font-size: 0.7rem;
+  }
+}
+
 @import "modules/translate";
 @import "modules/files";
 @import "parts/ace";
