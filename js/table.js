@@ -49,14 +49,19 @@ $(document).on('click', 'table thead th.check.all [type="checkbox"]', function (
     $this.prop('checked', !$this.prop('checked')).closest('table').checkboxes('toggle');
 });
 
-$(document).on('click', '.toolbar .search, .toolbar .exit-search', function (e) {
+$(document).on('click', '.toolbar .search', function (e) {
     e.preventDefault();
-    var $toolbar = $('.toolbar');
-    $toolbar.toggleClass('search');
-    $('.page-size').toggleClass('search');
-    if ($toolbar.hasClass('search')) {
-        $('.toolbar .search-toolbar input').focus();
-    }
+    $('.toolbar').addClass('search');
+    $('.page-size').addClass('search');
+    $('.toolbar .search-toolbar input').focus();
+    return false;
+});
+
+$(document).on('click', '.toolbar .exit-search', function (e) {
+    e.preventDefault();
+    $('.toolbar').removeClass('search');
+    $('.page-size').removeClass('search');
+    $('.toolbar .search-toolbar input').val('');
     return false;
 });
 
