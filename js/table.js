@@ -62,6 +62,29 @@ $(document).on('click', '.toolbar .exit-search', function (e) {
     $('.toolbar').removeClass('search');
     $('.page-size').removeClass('search');
     $('.toolbar .search-toolbar input').val('');
+
+    var searchVar = 'search';
+    var $list = $('#list');
+    var url = $list.data('path');
+
+    url = url.replace(new RegExp("(&|\\?)" + searchVar + "=.*?(&|$)", 'g'), function (str, p1, p2, offset, s) {
+        if (p1 == '?') {
+            return '?';
+        } else if (p2 == '') {
+            return '';
+        }
+        return '&';
+    });
+
+    var data = {};
+    data[searchVar] = '';
+    $.ajax({
+        url: url,
+        data: data,
+        success: function (html) {
+            $list.replaceWith($(html).find('#list'));
+        }
+    });
     return false;
 });
 
