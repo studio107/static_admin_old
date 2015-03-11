@@ -8712,12 +8712,13 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 			options.binded.fill();
 			if ($this.is('input')) {
 				$this
-					.pickmeup('set_date', parseDate(($this.val()) ? $this.val() : options.default_date, options.format, options.separator, options.locale))
+					.pickmeup('set_date', parseDate($this.val() ? $this.val() : options.default_date, options.format, options.separator, options.locale))
 					.keydown(function (e) {
 						if (e.which == 9) {
 							$this.pickmeup('hide');
 						}
 					});
+				options.lastSel = false;
 			}
 			options.before_show();
 			if (options.show() == false) {
@@ -8859,7 +8860,8 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 		}
 	}
 	function set_date (date) {
-		var options = $(this).data('pickmeup-options');
+		var $this	= $(this),
+			options = $this.data('pickmeup-options');
 		options.date = date;
 		if (typeof options.date === 'string') {
 			options.date = parseDate(options.date, options.format, options.separator, options.locale).setHours(0,0,0,0);
@@ -8889,6 +8891,10 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 		}
 		options.current = new Date (options.mode != 'single' ? options.date[0] : options.date);
 		options.binded.fill();
+		if ($this.is('input')) {
+			var prepared_date	= prepareDate(options);
+			$this.val(options.mode == 'single' ? prepared_date[0] : prepared_date[0].join(options.separator));
+		}
 	}
 	function destroy () {
 		var	$this	= $(this),
@@ -39614,6 +39620,29 @@ $(document).on('click', '.toolbar .exit-search', function (e) {
     $('.toolbar').removeClass('search');
     $('.page-size').removeClass('search');
     $('.toolbar .search-toolbar input').val('');
+
+    var searchVar = 'search';
+    var $list = $('#list');
+    var url = $list.data('path');
+
+    url = url.replace(new RegExp("(&|\\?)" + searchVar + "=.*?(&|$)", 'g'), function (str, p1, p2, offset, s) {
+        if (p1 == '?') {
+            return '?';
+        } else if (p2 == '') {
+            return '';
+        }
+        return '&';
+    });
+
+    var data = {};
+    data[searchVar] = '';
+    $.ajax({
+        url: url,
+        data: data,
+        success: function (html) {
+            $list.replaceWith($(html).find('#list'));
+        }
+    });
     return false;
 });
 
