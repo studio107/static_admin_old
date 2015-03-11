@@ -59,6 +59,14 @@ fieldset {
   }
 }
 
+.meditor-controls {
+  .row {
+    .large-12 {
+      padding: 0 !important;
+    }
+  }
+}
+
 form.save-update {
   .buttons-block {
     padding: $column-gutter/2;

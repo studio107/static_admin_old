@@ -7172,6 +7172,9 @@ fieldset {
     .form-errors .form-errors-inline .inline-name {
       font-weight: 700; }
 
+.meditor-controls .row .large-12 {
+  padding: 0 !important; }
+
 form.save-update .buttons-block {
   padding: 0.9375rem; }
   form.save-update .buttons-block .button {
