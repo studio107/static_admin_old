@@ -34,6 +34,7 @@ $(function () {
         $('#sidebar').toggle();
         $('#hide-sidebar').toggleClass('show');
         $('body').addClass('open-menu');
+        $('form.save-update .buttons-block').css('left', 0);
     }
 });
 
@@ -52,9 +53,11 @@ $(document).on('click', '#hide-sidebar', function (e) {
     $('#sidebar').toggle();
     $this.toggleClass('show');
     if ($this.hasClass('show')) {
+        $('form.save-update .buttons-block').css('left', 0);
         $('body').removeClass('open-menu');
         $.cookie('sidebar-visible', true);
     } else {
+        $('form.save-update .buttons-block').css('left', '250px');
         $('body').addClass('open-menu');
         $.removeCookie('sidebar-visible');
     }
