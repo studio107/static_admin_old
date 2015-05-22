@@ -5,7 +5,7 @@
     var filesField = {
         options: {
             listId: undefined,
-
+            contentId: undefined,
             uploadUrl: undefined,
             sortUrl: undefined,
             deleteUrl: undefined,
@@ -75,6 +75,15 @@
                 me.updateList();
             });
         },
+        checkEmpty: function() {
+            var $list = $('#' + this.options.listId);
+            var $empty = $list.next('.empty-info');
+            if ($list.find('li').length > 0) {
+                $empty.addClass('hide');
+            } else {
+                $empty.removeClass('hide');
+            }
+        },
         updateList: function () {
             var me = this;
             $.ajax({
@@ -82,8 +91,9 @@
                 'dataType': 'html',
                 'success': function (data) {
                     var wrapped_data = $('<div/>').append(data);
-                    $('#' + me.options.listId).replaceWith(wrapped_data.find('#' + me.options.listId));
+                    $('#' + me.options.contentId).replaceWith(wrapped_data.find('#' + me.options.contentId));
                     me.initList();
+                    me.checkEmpty();
                 }
             });
         },
@@ -127,6 +137,7 @@
                 'success': function(){
                     $('#' + me.options.listId).find('[data-pk="'+pk+'"]').fadeOut(300, function(){
                         $(this).remove();
+                        me.checkEmpty();
                     });
                 }
             });
