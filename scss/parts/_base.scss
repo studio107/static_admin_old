@@ -1,0 +1,71 @@
+#wrapper-table {
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+
+  tbody {
+    tr {
+      td {
+        padding: 0;
+        vertical-align: top;
+
+        &#sidebar-td {
+          background-color: transparent;
+          width: $sidebarWidth;
+          border-right: 1px solid #ccc;
+
+          @import "sidebar";
+        }
+
+        &#content-td {
+          background-color: #fff;
+
+          .overflow-wrapper {
+            .webkit-fix-padding-td {
+              padding: 20px;
+            }
+
+            @import "table";
+
+            table {
+              width: 100%;
+
+              thead, tbody {
+                tr {
+                  th {
+                    &, & a {
+                      color: #aaa;
+                    }
+                  }
+
+                  td, th {
+                    padding: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .overflow-wrapper {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: auto;
+          position: relative;
+
+          .perfect-scrollbar {
+            position: relative;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
