@@ -27,40 +27,13 @@
   }
 }
 
-.toolbar-holder {
-  height: 62px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.toolbar {
-  .button, select {
-    float: left;
-  }
-}
-
-.toolbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  select, input, .button {
-    margin-bottom: 0;
-  }
-}
-
 form.save-update {
   .buttons-block {
     z-index: 10001;
     position: fixed;
     bottom: 0;
-    left: $sidebarWidth;
-    width: $mainWidth;
+    left: $sidebarWidth + 1px;
+    width: auto;
     background-color: #fff;
-
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: $borderColor;
-
-    @include box-shadow(0px -1px 3px 0 rgba(0, 0, 0, .2));
   }
 }

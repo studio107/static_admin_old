@@ -1,4 +1,4 @@
-table {
+#table-main {
   width: 100%;
   border: none;
 
@@ -7,16 +7,12 @@ table {
 
     tr {
       th {
-        &.check.all {
-          padding: 0 0 0 18px;
-          width: 32px;
-          .checkbox-state {
-            margin: 0;
-          }
-        }
-        font-size: 11px;
-        text-transform: uppercase;
+        font-size: .8rem;
+        text-transform: capitalize;
         color: $darkGrey;
+        &:hover {
+          background-color: #f4f4f4 !important;
+        }
         a {
           color: $darkGrey;
           &:hover {
@@ -43,6 +39,7 @@ table {
   tbody {
     tr {
       background-color: #fff !important;
+
       &:hover {
         background-color: #f4f4f4 !important;
       }
@@ -63,12 +60,16 @@ table {
         width: 40px;
       }
       td, th {
+        padding: 0 5px;
+        height: 32px;
+        line-height: 32px;
+
         &.td-id, &.th-id {
           width: 40px;
           text-align: center;
         }
         &.check {
-          padding: 0 0 0 18px;
+          text-align: center;
           width: 32px;
           .checkbox-state {
             margin: 0;

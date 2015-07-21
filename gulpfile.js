@@ -9,6 +9,7 @@ var concat = require('gulp-concat'),
     clean = require('gulp-clean'),
     // rewriteCSS = require('gulp-rewrite-css'),
     coffee = require('gulp-coffee'),
+    autoprefixer = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload');
 
 var version = '1.0.0';
@@ -57,9 +58,12 @@ var paths = {
         'vendor/pickmeup/js/jquery.pickmeup.js',
         'vendor/remarkable/dist/remarkable.js',
         'vendor/jquery-form/jquery.form.js',
+        'vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
 
         'vendor/underscore/underscore.js',
+
         'vendor/ckeditor/ckeditor.js',
+
         'vendor/meditor/js/utils.js',
         'vendor/meditor/js/core.js',
         'vendor/meditor/js/engine.js',
@@ -72,13 +76,10 @@ var paths = {
         'vendor/meditor/js/plugins/image.js',
         'vendor/meditor/js/plugins/map/map.js',
 
-        'vendor/ace/build/src/ace.js',
-        'vendor/ace/build/src/mode-twig.js',
-        'vendor/ace/build/src/theme-crimson_editor.js',
-        'vendor/ace/build/src/ext-emmet.js',
-        'vendor/ace/build/src/ext-language_tools.js',
-        'vendor/ace/build/src/snippets/text.js',
-        'vendor/ace/build/src/snippets/twig.js',
+        'vendor/semantic-ui/dist/components/checkbox.js',
+        'vendor/semantic-ui/dist/components/dropdown.js',
+        'vendor/semantic-ui/dist/components/popup.js',
+        'vendor/semantic-ui/dist/components/transition.js',
 
         // https://github.com/nightwing/emmet-core
         'components/emmet.js',
@@ -88,7 +89,11 @@ var paths = {
         'js/*.js'
     ],
     coffee: 'js/**/*.coffee',
-    fonts: 'fonts/**/*',
+    fonts: [
+        'fonts/glyphico/fonts/*{.eot,.woff,.woff2,.ttf,.svg}',
+        'fonts/lato/fonts/*{.eot,.woff,.woff2,.ttf,.svg}',
+        'fonts/semantic-ui/fonts/*{.eot,.woff,.woff2,.ttf,.svg}'
+    ],
     images: 'images/**/*',
     sass: [
         'scss/**/*.scss'
@@ -98,6 +103,7 @@ var paths = {
 
         'fonts/lato/css/style.css',
         'fonts/glyphico/css/style.css',
+        'fonts/semantic-ui/style.css',
 
         'vendor/meditor/css/editor.css',
         'vendor/pen/src/pen.css',
@@ -110,12 +116,6 @@ var paths = {
 gulp.task('fonts', function() {
     return gulp.src(paths.fonts)
         .pipe(gulp.dest(dst.fonts));
-});
-
-gulp.task('wysiwyg', function() {
-    return gulp.src('vendor/tinymce107/**/*')
-        .pipe(gulp.dest('dist/wysiwyg'))
-        .pipe(livereload());
 });
 
 gulp.task('coffee', function() {
@@ -155,8 +155,12 @@ gulp.task('css', ['sass', 'fonts'], function() {
         //    destination: 'dist/css/'
         //}))
         .pipe(gulp.dest(dst.sass))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        //.pipe(minifyCSS(minifyOpts))
         .pipe(concat(version + '.all.css'))
-        .pipe(minifyCSS(minifyOpts))
         .pipe(gulp.dest(dst.css))
         .pipe(livereload());
 });
@@ -174,6 +178,10 @@ gulp.task('clean', function() {
     }).pipe(clean());
 });
 
+gulp.task('build', function() {
+    return gulp.start('js', 'css', 'images', 'fonts');
+});
+
 gulp.task('default', ['clean'], function() {
-    return gulp.start('js', 'css', 'images', 'wysiwyg');
+    return gulp.start('build');
 });

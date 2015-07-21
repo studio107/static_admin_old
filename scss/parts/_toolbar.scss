@@ -1,79 +1,88 @@
-.toolbar {
-  display: inline-block;
+.toolbar-holder {
+  height: 62px;
 
-  select {
-    width: 200px;
-  }
+  .toolbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-  .search-toolbar {
-    display: none;
-    position: relative;
-
-    .exit-search, .icon-search {
-      position: absolute;
-      height: 39px;
-      line-height: 39px;
-      width: 39px;
-      text-align: center;
+    select {
+      width: 200px;
     }
 
-    .exit-search {
-      right: 0;
-      top: 0;
+    select, input, .button {
+      margin-bottom: 0;
     }
 
-    .icon-search {
-      left: 0;
-      top: 0;
-    }
-
-    i {
+    .search-toolbar {
+      display: none;
       position: relative;
-      top: 2px;
-      color: $midGrey;
+
+      .exit-search, .icon-search {
+        position: absolute;
+        height: 39px;
+        line-height: 39px;
+        width: 39px;
+        text-align: center;
+      }
+
+      .exit-search {
+        right: 0;
+        top: 0;
+      }
+
+      .icon-search {
+        left: 0;
+        top: 0;
+      }
+
+      i {
+        position: relative;
+        top: 2px;
+        color: $midGrey;
+      }
+
+      input {
+        padding-left: 39px;
+        @include border-radius(3px);
+        background-color: $grey;
+
+        &:focus{
+          border: 1px solid $blue;
+        }
+      }
+
     }
 
-    input {
-      padding-left: 39px;
-      @include border-radius(3px);
-      background-color: $grey;
+    .search {
+      margin-right: 10px;
+    }
 
-      &:focus{
-        border: 1px solid $blue;
+    .create {
+      margin-right: 20px;
+
+      i {
+        position: relative;
+        top: 2px;
       }
     }
 
-  }
-
-  .search {
-    margin-right: 10px;
-  }
-
-  .create {
-    margin-right: 20px;
-
-    i {
-      position: relative;
-      top: 2px;
-    }
-  }
-
-  .submit-actions {
-    margin-left: 10px;
-  }
-
-  &.search {
-    width: 100%;
-
-    .search-toolbar {
-      @include crossbrowser(animation-name, show);
-      @include crossbrowser(animation-duration, 0.3s);
-      @include crossbrowser(animation-fill-mode, both);
-      display: block;
+    .submit-actions {
+      margin-left: 10px;
     }
 
-    .search, .create, .actions, .submit-actions {
-      display: none;
+    &.search {
+      width: 100%;
+
+      .search-toolbar {
+        @include crossbrowser(animation-name, show);
+        @include crossbrowser(animation-duration, 0.3s);
+        @include crossbrowser(animation-fill-mode, both);
+        display: block;
+      }
+
+      .search, .create, .actions, .submit-actions {
+        display: none;
+      }
     }
   }
 }

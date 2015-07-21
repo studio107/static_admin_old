@@ -1,26 +1,25 @@
 .button {
   @include border-radius(3px);
   outline: none;
-  font-size: 14px;
   background-color: $blue;
 
-  &:active{
+  &:active {
     background-color: $midBlue;
   }
 
-  &:hover{
+  &:hover {
     background-color: $midBlue;
   }
 
-  &.grey{
+  &.grey {
     background-color: $softGrey;
     color: $darkGrey;
 
-    &:active{
+    &:active {
       background-color: $semiSoftGrey;
     }
 
-    &:hover{
+    &:hover {
       background-color: $semiSoftGrey;
     }
   }

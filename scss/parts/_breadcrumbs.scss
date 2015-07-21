@@ -1,7 +1,54 @@
+.breadcrumb-container {
+  .breadcrumb {
+    .section {
+      color: #353535;
+    }
+
+    i.icon {
+      float: none !important;
+    }
+
+    a {
+      &, &:hover {
+        color: #353535;
+      }
+    }
+  }
+
+  .ui.popup {
+    min-width: 200px;
+    padding: 10px 0;
+
+    .breadcrumb-nested-list {
+      @include reset-list;
+
+      li {
+        font-size: .9rem;
+
+        &:not(&:last-child) {
+          margin-bottom: 5px;
+        }
+
+        &:hover {
+          a {
+            background-color: #2575b0;
+            color: #fff;
+          }
+        }
+
+        a {
+          padding: 4px 10px;
+          display: block;
+          color: #353535;
+        }
+      }
+    }
+  }
+}
+
 #breadcrumbs {
   $childPadding: 10px;
 
-  @include antialias();
   @include reset-list;
   @include clearfix;
   padding: $defaultPadding $defaultPadding 0 $defaultPadding;
@@ -24,7 +71,7 @@
       @include border-radius(3px);
       position: absolute;
       left: -$childPadding;
-      top: auto;
+      top: 28px;
       width: 200px;
       background-color: #fff;
       display: none;

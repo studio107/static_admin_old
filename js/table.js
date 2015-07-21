@@ -36,12 +36,12 @@ $(function() {
             });
         }
     }).disableSelection();
+});
 
-    $(document).on('click', function(e) {
-        if ($(e.target).closest('.search').length == 0) {
-            $('.toolbar').removeClass('search');
-        }
-    });
+$(document).on('click', function(e) {
+    if ($(e.target).closest('.search').length == 0) {
+        $('.toolbar').removeClass('search');
+    }
 });
 
 $(document).on('click', 'table thead th.check.all [type="checkbox"]', function (e) {

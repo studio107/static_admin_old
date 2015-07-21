@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'glyphico';
-    src: url('../fonts/glyphico/fonts/glyphico.eot?cpw12b');
-    src: url('../fonts/glyphico/fonts/glyphico.eot?#iefixcpw12b') format('embedded-opentype'),
-    url('../fonts/glyphico/fonts/glyphico.woff?cpw12b') format('woff'),
-    url('../fonts/glyphico/fonts/glyphico.ttf?cpw12b') format('truetype'),
-    url('../fonts/glyphico/fonts/glyphico.svg?cpw12b#glyphico') format('svg');
+    src: url('../fonts/glyphico.eot?cpw12b');
+    src: url('../fonts/glyphico.eot?#iefixcpw12b') format('embedded-opentype'),
+    url('../fonts/glyphico.woff?cpw12b') format('woff'),
+    url('../fonts/glyphico.ttf?cpw12b') format('truetype'),
+    url('../fonts/glyphico.svg?cpw12b#glyphico') format('svg');
     font-weight: normal;
     font-style: normal;
 }

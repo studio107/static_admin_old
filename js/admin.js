@@ -1,6 +1,29 @@
+var resizeButtonsBlock = function () {
+    $('.buttons-block').css($('#sidebar-td').hasClass('hide') ? {
+        width: $(document).width() - 250,
+        left: 251
+    } : {
+        width: '100%',
+        left: 0
+    });
+};
+
 $(function () {
     $(document).foundation();
+
+    $('.ui.dropdown').dropdown();
+    $('.ui.checkbox').checkbox();
+    $('.show-hide-sidebar, .ui.popup-item').popup();
+    $('.breadcrumb-nested').popup({
+        inline: true,
+        hoverable: true,
+        position: 'bottom left'
+    });
+
     $('textarea').autosize();
+
+    resizeButtonsBlock();
+    $(window).on('resize', resizeButtonsBlock);
 
     //$(document).on('click', "[data-toggle]", function () {
     //    $(this).next().toggle();
@@ -30,11 +53,8 @@ $(function () {
 
     $.mtooltip('[rel~=tooltip]');
 
-    if ($.cookie('sidebar-visible')) {
-        $('#sidebar').toggle();
-        $('#hide-sidebar').toggleClass('show');
-        $('body').addClass('open-menu');
-        $('form.save-update .buttons-block').css('left', 0);
+    if (!$.cookie('sidebar-show')) {
+        resizeButtonsBlock();
     }
 });
 
@@ -49,18 +69,11 @@ $(document).on('click', '.mmodal', function (e) {
 
 $(document).on('click', '#hide-sidebar', function (e) {
     e.preventDefault();
-    var $this = $(this);
-    $('#sidebar').toggle();
-    $this.toggleClass('show');
-    if ($this.hasClass('show')) {
-        $('form.save-update .buttons-block').css('left', 0);
-        $('body').removeClass('open-menu');
-        $.cookie('sidebar-visible', true);
-    } else {
-        $('form.save-update .buttons-block').css('left', '250px');
-        $('body').addClass('open-menu');
-        $.removeCookie('sidebar-visible');
-    }
+    var $sidebar = $('#sidebar-td');
+    $sidebar.toggle();
+    $.cookie('sidebar-show', $sidebar.css('display') != 'none');
+    console.log($.cookie('sidebar-show'));
+    resizeButtonsBlock();
     return false;
 });
 
