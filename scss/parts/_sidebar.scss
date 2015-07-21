@@ -1,39 +1,10 @@
 #sidebar {
-  #header {
-    @include clearfix;
-    padding: 0 $defaultPadding;
-    height: $logoSize;
-    line-height: $logoSize;
-    margin: 20px 0;
-
-    #logo {
-      width: $logoSize;
-      height: $logoSize;
-      font-size: $logoSize;
-      font-weight: 700;
-
-      color: $darkGrey;
-      margin: -6px 0 0;
-      @include antialias;
-    }
-
-    .manage {
-      a {
-        color: $darkGrey;
-        margin-left: 13px;
-        font-size: 1rem;
-      }
-    }
-
-    .user-panel {
-      @include reset-list;
-
-      li {
-        @include float-left;
-        margin-left: 15px;
-      }
-    }
-  }
+  @include box-sizing(border-box);
+  width: $sidebarWidth;
+  min-width: $sidebarWidth;
+  vertical-align: top;
+  padding: 0;
+  background-color: $grey;
 
   #sidebar-menu {
     @include reset-list;
@@ -41,6 +12,7 @@
 
     & > li {
       margin-bottom: 10px;
+      font-weight: 300;
     }
 
     li {
@@ -52,22 +24,21 @@
       }
 
       & > span {
-        font-size: .9rem;
+        font-size: 15px;
         text-transform: capitalize;
+        color: $darkGrey;
+        background-color: $grey;
 
         $moduleNameHeight: 24px;
         $imageSize: 16px;
 
         .module-name {
-          color: #353535;
+          color: $darkGrey;
           display: block;
+          height: $moduleNameHeight;
           line-height: $moduleNameHeight;
           padding-left: $defaultPadding;
           padding-right: $defaultPadding;
-
-          &:hover {
-            text-decoration: underline;
-          }
         }
 
         .module-image {
@@ -75,7 +46,7 @@
           height: $moduleNameHeight;
           display: inline-block;
           float: left;
-          margin-right: 6px;
+          margin-right: 7px;
         }
       }
 
@@ -87,18 +58,21 @@
 
         li {
           position: relative;
-          font-size: .9rem;
+          font-size: 14px;
+          line-height: 20px;
           margin: 0;
+          @include box-sizing(border-box);
 
           &, & a {
-            color: #353535;
+            color: #333539;
           }
 
           &.active, &:hover {
             $borderLeftSize: 4px;
+            border-left: 4px solid $blue;
 
             a {
-              border-color: $blue;
+              padding-left: 54px - $borderLeftSize;
               color: $blue;
 
               i {
@@ -108,11 +82,9 @@
           }
 
           a {
-            transition: $transition;
-            border-left: 4px solid transparent;
-            font-size: .9rem;
+            font-size: 13px;
             display: block;
-            padding-left: 44px;
+            padding-left: 54px;
             font-weight: normal;
 
             i {

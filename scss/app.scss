@@ -1,14 +1,8 @@
 @import "normalize";
-
-@import "settings";
+@import "foundation/settings";
 @import "base";
-@import "foundation_settings";
-
+@import "foundation";
 @import "mindy";
-
-@import "vendor/ui";
-@import "vendor/perfectscroll";
-
 @import "parts/mixins";
 
 body {
@@ -16,7 +10,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include antialias;
+  font-weight: 400 !important;
+  color: #777;
 }
 
 h1, h2, h3 {
@@ -41,14 +36,107 @@ fieldset {
   }
 }
 
+#header {
+  @include clearfix;
+  padding: 0 $defaultPadding;
+  height: $logoSize;
+  line-height: $logoSize;
+  margin: 25px 0;
+
+  #logo {
+    width: $logoSize;
+    height: $logoSize;
+    font-size: $logoSize;
+    font-weight: 700;
+
+    color: $darkGrey;
+    margin: -6px 0 0;
+    @include antialias;
+  }
+
+  .manage {
+    padding-left: 13px;
+
+    a {
+      color: $darkGrey;
+      margin-left: 13px;
+      font-size: 14px;
+    }
+  }
+
+  .user-panel {
+    @include reset-list;
+
+    li {
+      @include float-left;
+      margin-left: 15px;
+    }
+  }
+}
+
+@media #{unquote($large-up)} {
+  #wrapper {
+    #sidebar {
+      position: static;
+      display: table-cell;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+      &::after {
+        display: none;
+      }
+
+      .nano > .nano-content {
+        position: static;
+        left: inherit;
+        bottom: inherit;
+        top: inherit;
+      }
+    }
+  }
+
+  #main {
+    #content {
+      border: 0;
+    }
+  }
+}
+
+@media #{unquote($xlarge-up)} {
+  #base {
+    min-width: $mainWidth + $sidebarWidth;
+  }
+}
+
 #wrapper {
   @include box-sizing(border-box);
   height: 100%;
   width: 100%;
   min-width: 978px;
 
+  @import "parts/sidebar";
+  @import "parts/breadcrumbs";
+
   #main {
     @include clearfix;
+    padding: 0;
+
+    #hide-sidebar {
+      position: fixed;
+      top: 50%;
+      left: $sidebarWidth - 17px;
+      width: 18px;
+      height: 43px;
+      margin-top: -21px;
+      background: transparent url(../images/sidebar-hide.png) 50% 50% no-repeat;
+      @include hide-text;
+      display: block;
+
+      &.show {
+        background-image: url(../images/sidebar-show.png);
+        left: 0;
+      }
+    }
 
     #content {
       border-width: 0 1px;
@@ -57,8 +145,16 @@ fieldset {
       background-color: #fff;
       height: 100%;
 
+      .heading {
+        padding: 10px $defaultPadding 0 $defaultPadding;
+
+        h1 {
+          margin-bottom: 0;
+        }
+      }
+
       .content-wrap {
-        padding: $defaultPadding / 2 $defaultPadding $defaultPadding;
+        padding: $defaultPadding;
       }
 
       &.list {
@@ -73,13 +169,7 @@ fieldset {
         padding: 0;
 
         .content-wrap {
-          padding-bottom: $defaultPadding * 2;
-
-          fieldset {
-            border: {
-              width: 1px 0 0;
-            }
-          }
+          padding: 0 0 $defaultPadding * 2 0;
         }
       }
     }
@@ -152,14 +242,8 @@ fieldset {
   }
 }
 
-#hide-sidebar {
-  display: block;
-}
-
 @import "modules/translate";
 @import "modules/files";
-
-@import "parts/base";
 @import "parts/ace";
 @import "parts/info";
 @import "parts/sticky";
@@ -167,6 +251,7 @@ fieldset {
 @import "parts/form";
 @import "parts/pager";
 @import "parts/toolbar";
+@import "parts/table";
 @import "parts/fixes";
 @import "parts/debugpanel";
 @import "parts/news";
@@ -177,4 +262,3 @@ fieldset {
 @import "parts/flash";
 @import "parts/tooltip";
 @import "parts/select2";
-@import "parts/breadcrumbs";

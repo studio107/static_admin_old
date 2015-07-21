@@ -69,10 +69,7 @@ fieldset {
 
 form.save-update {
   .buttons-block {
-    @include box-shadow(0px -2px 8px 0 rgba(0, 0, 0, .076));
-    padding: $column-gutter / 2;
-    border-top: 1px solid #ccc;
-
+    padding: $column-gutter/2;
     .button {
       margin-bottom: 0 !important;
       margin-right: 10px !important;
@@ -131,17 +128,17 @@ form {
     }
 
     fieldset {
-      padding: $defaultPadding 0 $defaultPadding;
-      margin: 0;
+      padding: $defaultPadding;
+      padding-top: $defaultPadding + 25px;
       position: relative;
-      border-width: 1px 0 0;
+      margin: 0;
 
       legend {
         position: absolute;
-        top: -10px;
+        top: 15px;
         text-transform: uppercase;
-        font-size: .8rem;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 900;
       }
 
       .form-ul, .form-block {
@@ -155,7 +152,7 @@ form {
     }
 
     .inline-form {
-      padding: $defaultPadding 0;
+      padding: $defaultPadding;
 
       .form-inline-section {
         padding: 5px 0 10px;
@@ -167,13 +164,12 @@ form {
         }
 
         a.current-file {
-          @include ellipsis;
+          @include ellipsis();
           display: block;
         }
 
         .form-block {
           margin: 0;
-          padding: 0;
         }
 
         & > table {
@@ -232,7 +228,8 @@ form {
   }
 
   label {
-    font-size: .9rem;
+    font-size: 13px;
+    color: $mediumGrey;
     margin-bottom: 4px;
   }
 
@@ -294,9 +291,8 @@ form {
   }
 
   .form-hint-text {
-    font-size: .9rem;
-    color: $darkGrey;
-    margin-bottom: 5px;
+    font-size: 13px;
+    color: $midGrey;
   }
 }
 
@@ -306,6 +302,9 @@ form {
 
 .form-label {
   margin-bottom: 0;
+  label {
+    color: $concrete;
+  }
 }
 
 textarea {
